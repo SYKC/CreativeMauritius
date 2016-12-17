@@ -1,0 +1,267 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+    background-color: $white-smoke;
+    h1.site-title {
+      font-weight: 100;
+      font-family: $font-family-sans-serif;
+      text-align: center;
+    }
+    p {
+      span.underline {
+        border-bottom: 1px dotted $black-border;
+      }
+
+      span.underline:hover {
+        border-bottom: 1px solid $black-border;
+      }
+    }
+    button#edit {
+        float: right;
+        background: none;
+        border: 1px solid $brand-primary;
+        margin: -40px 0 0 0;
+    }
+}
+
+.featured-moments {
+  width: 100%;
+  height: 200px;
+  border-radius: 2px;
+  cursor: pointer;
+  background: url("https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/12940075_1578779442434745_975592600_n.jpg?ig_cache_key=MTIyOTAyMjkxODM3NjUzNDA3Nw%3D%3D.2") no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  .moment-info {
+    color: $silver-chalice;
+    float: left;
+    padding: 20px;
+    position: absolute;
+    span.attribute {
+      display: block;
+    }
+  }
+  h1 {
+    color: $white-smoke;
+    padding: 20px;
+    font-size: 48px;
+    font-family: 'Bevan', cursive;
+  }
+  hr {
+    width: 4%;
+    border: 4px solid #009CFC;
+    float: left;
+    top: -32px;
+    position: relative;
+    left: 22px;
+    margin: 0 auto;
+  }
+  p {
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    bottom: 40px;
+  }
+  button#learn-more {
+    float: right;
+    position: relative;
+    border: 1px solid $azure-radiance;
+    background: none;
+    bottom: -45px;
+    right: 14px;
+    color: $white-smoke;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: $transparent-white;
+  }
+}
+
+.ui-options-wrapper {
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+h5#order-by {
+  font-weight: 800;
+  padding: 4px;
+  width: 100px;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid $malachite;
+  background-color: $malachite;
+  color: $white-smoke;
+}
+
+h5#add-tags {
+  font-weight: 800;
+  padding: 4px;
+  width: 160px;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid $malachite;
+  background: none;
+  color: $black-border;
+}
+
+.categories {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.category-grid {
+  width: 270px;
+  height: 250px;
+  border-radius: 4px;
+  font-family: 'Bevan', cursive;
+  padding: 0px;
+  margin: 0 4px 0 2px;
+}
+
+#decisive {
+  margin-bottom: 10px;
+  display: inline-block;
+  background: url("https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/13827291_1238369022870418_468070157_n.jpg?ig_cache_key=MTI5OTAzOTYwMzk1NzQ2NDg5Ng%3D%3D.2") no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  h3 {
+    color: $ripe-lemon;
+    font-size: 24px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    line-height: 10;
+  }
+}
+
+#important {
+  margin-bottom: 10px;
+  display: inline-block;
+  background: url("https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/13525519_1020396414704768_1070752329_n.jpg?ig_cache_key=MTI4MjY2ODQwMzA2MDI3MTMxNg%3D%3D.2") no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  h3 {
+    color: $white-smoke;
+    font-size: 24px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    line-height: 10;
+  }
+}
+
+#memorable {
+  margin-bottom: 10px;
+  display: inline-block;
+  background: url("https://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/13423496_1752341948341575_581384639_n.jpg?ig_cache_key=MTI3NzY2Mjk1OTg5Mzg1MzE3OQ%3D%3D.2") no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  h3 {
+    color: $pomegranate;
+    font-size: 24px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    line-height: 10;
+  }
+}
+
+#unique {
+  margin-bottom: 10px;
+  display: inline-block;
+  background: url("https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/12965102_1604162366572712_195862896_n.jpg?ig_cache_key=MTIzODUwMDAxMzg4MDIyNjc4NQ%3D%3D.2") no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  h3 {
+    color: $malachite;
+    font-size: 24px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    line-height: 10;
+  }
+}
+
+.breadcrumbs-navigation {
+  padding: 16px;
+  margin-top: -22px;
+  background-color: $azure-radiance;
+  span {
+    color: $white-smoke;
+  }
+  button#return {
+    float: right;
+    background: none;
+    color: $white-smoke;
+    border: 1px solid $white-smoke;
+  }
+}
+
+#tagline {
+  text-align: center;
+}
+
+.profile-container {
+  padding: 10px;
+  background-color: $complete-white;
+  img.user-avatar {
+    border-radius: 50%;
+  }
+}
+
+img.navbar-avatar {
+  width: 30px;
+  height: 30px;
+  margin: 0 4px 0 0;
+  border-radius: 50px;
+}
+
+input#avatar {
+    border: 1px solid $azure-radiance;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.navbar-default {
+  border: none;
+  .navbar-toggle {
+    border: 1px solid $azure-radiance;
+  }
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    color: $white-smoke;
+    border: 1px solid $azure-radiance;
+    background-color: $azure-radiance;
+  }
+}
+
+.preview {
+  border-radius: 4px;
+}
