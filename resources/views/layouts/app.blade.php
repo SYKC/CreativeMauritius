@@ -27,7 +27,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    <script src="{{ URL::asset('js/ink-js/ink-all.min.js') }}"></script>
+    <script src="{{ secure_asset('js/ink-js/ink-all.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
