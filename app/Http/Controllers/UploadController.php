@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace creativemauritius\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Upload;
+use creativemauritius\Models\Upload;
 
 class UploadController extends Controller
 {

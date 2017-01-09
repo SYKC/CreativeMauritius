@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace creativemauritius\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
 use Image;
 use File;
-use App\User;
+use creativemauritius\Models\User;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Input;
 use Route;
@@ -57,6 +57,8 @@ class ProfileController extends Controller
       $username = Auth::user()->username;
       $user = User::where('email', '=', Input::get('email'))->first();
       $avatar = $request->file('avatar');
+
+      //Chmod 777 the image directory for writing images
 
       if($request->hasFile('avatar')) {
         $filename = $username . '-' . time() . '-' . 'avatar' . '.' . $avatar->getClientOriginalExtension();

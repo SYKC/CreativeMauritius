@@ -23,6 +23,23 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/dashboard', 'AdminController@index');
+
+Route::get('/dashboard/posts/create', [
+  'uses' => 'PostController@getPage',
+  'as' => 'dashboard.posts',
+]);
+
+Route::post('/dashboard/posts/create/new', [
+  'uses' => 'PostController@createPost',
+  'as' => 'post.create',
+]);
+
+Route::get('/dashboard/media', [
+  'uses' => 'AdminController@getMedia',
+  'as' => 'dashboard.media',
+]);
+
 Route::get('user/{username}', [
   'uses' => 'ProfileController@getProfile',
   'as' => 'user.profile',

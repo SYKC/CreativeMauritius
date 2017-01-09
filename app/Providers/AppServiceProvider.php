@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace creativemauritius\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

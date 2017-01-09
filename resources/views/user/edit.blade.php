@@ -6,7 +6,7 @@
 <a href="{{ route('user.profile', ['username' => Auth::user()->username]) }}"><button id="return">Back to profile</button></a>
 </div>
 
-<div class="container">
+<div class="container" id="container-top">
 
 <h1>Edit your profile.</h1>
 

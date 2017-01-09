@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace creativemauritius\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -17,7 +18,7 @@ class User extends Authenticatable
     protected $table = 'users';
 
     protected $fillable = [
-        'name', 'email', 'password', 'username', 'avatar', 'biography', 'location',
+        'name', 'email', 'password', 'username', 'avatar', 'biography', 'location', 'user_role',
     ];
 
     /**
@@ -29,9 +30,33 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function getUsername()
+    public function posts()
+    {
+      return $this->hasMany('creativemauritius\Models\Post');
+    }
+
+    public static function getAllUsers() {
+      return User::count();
+    }
+
+    public static function getRoutes()
+    {
+      $count = 0;
+      $routeCollection = Route::getRoutes();
+      foreach ($routeCollection as $value) {
+        $count = $count + 1;
+      }
+      echo $count;
+    }
+
+    public function getUsername($id)
     {
       return $this->username;
+    }
+
+    public static function lolsec()
+    {
+      return "Hello!";
     }
 
     public function getName()
@@ -50,6 +75,6 @@ class User extends Authenticatable
 
     public function uploads()
     {
-      return $this->hasMany('App\Upload');
+      return $this->hasMany('creativemauritius\Upload');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace creativemauritius\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,6 +8,6 @@ class Upload extends Model
 {
     public function user()
     {
-      return $this->belongsTo('App\User');
+      return $this->belongsTo('creativemauritius\User');
     }
 }

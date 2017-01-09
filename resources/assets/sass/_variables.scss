@@ -21,6 +21,7 @@ $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
 $text-color: #636b6f;
+$font-cabin: 'Cabin', sans-serif;
 
 // Navbar
 $navbar-default-bg: #fff;
@@ -38,6 +39,7 @@ $panel-default-heading-bg: #fff;
 
 //solid colours
 $malachite: #00D054;
+$botticelli: #D3E0E9;
 $ripe-lemon: #F0CA0E;
 $pomegranate: #F6471E;
 $white-smoke: #F5F5F5;
@@ -48,3 +50,11 @@ $azure-radiance: #009CFC;
 
 //transparent colours
 $transparent-white: rgba(255, 255, 255, 0.1);
+/*
+//Gradients
+background: #009cfc; // Old browsers
+background: -moz-linear-gradient(-45deg, #009cfc 0%, #00ffcd 100%); // FF3.6-15
+background: -webkit-linear-gradient(-45deg, #009cfc 0%,#00ffcd 100%); //  Chrome10-25,Safari5.1-6
+background: linear-gradient(135deg, #009cfc 0%,#00ffcd 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#00ffcd',GradientType=1 ); // IE6-9 fallback on horizontal gradient
+*/

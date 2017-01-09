@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Karusmoment',
+    'name' => 'Creative Mauritius',
 
     /*
     |--------------------------------------------------------------------------
@@ -172,11 +172,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        creativemauritius\Providers\AppServiceProvider::class,
+        creativemauritius\Providers\AuthServiceProvider::class,
+        // creativemauritius\Providers\BroadcastServiceProvider::class,
+        creativemauritius\Providers\EventServiceProvider::class,
+        creativemauritius\Providers\RouteServiceProvider::class,
 
         Intervention\Image\ImageServiceProvider::class,
 

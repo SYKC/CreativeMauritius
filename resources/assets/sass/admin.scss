@@ -1,0 +1,141 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+html, body {
+  background-color: $white-smoke;
+  color: $malachite;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 11px;
+    margin-bottom: 2px;
+}
+
+li > a {
+  color: inherit; /* colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+  color: inherit; /* colors for links too */
+  text-decoration: inherit; /* no underline */
+  background-color: none;
+}
+
+.menu-caption {
+  display: block !important;
+  font-size: 12px;
+  margin-top: 0px;
+  padding: 0px;
+  text-align: center;
+  margin-bottom: -40px;
+}
+
+p.total-users {
+  float: right;
+}
+
+span.status-online {
+  color: $malachite;
+}
+
+span.status-offline {
+  color: $pomegranate;
+}
+
+img.navbar-avatar {
+  width: 50px;
+  height: 50px;
+  margin: 8px 4px 0 8px;
+  border-radius: 4px;
+}
+
+.icon-set {
+  padding: 20px;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.navbar-default{
+  #home-menu {
+  margin-right: 40px;
+  }
+  ul, ol {
+      margin-top: 10px;
+      margin-bottom: 11px;
+      text-decoration: none;
+      list-style: none;
+    }
+}
+
+@media all and (max-width: 2000px) {
+  .navbar-default{
+    span {
+      display: none;
+    }
+  }
+}
+
+@media all and (min-width: 320px) {
+  .navbar-default{
+    span {
+      display: none;
+    }
+  }
+}
+
+#admin-panel {
+  margin: 20px 10% 0 4%;
+}
+
+#post-editor, #post-title , #post-title-input, #post-tags, #post-tags-input{
+  width: 100%;
+  max-width: 850px;
+}
+
+#post-tags {
+  float: left;
+}
+
+.form-wrap {
+  display: inline-block;
+  max-width: 740px;
+  width: 100%;
+}
+
+#post-editor-sidebar {
+  position: relative;
+  right: 16px;
+  top: 4px;
+  float: left;
+  .featured-image-widget {
+    max-width: 400px;
+    min-width: 400px;
+    height: 250px;
+    #image-preview {
+      top: 0px;
+      width: 100%;
+      max-height: 200px;
+      img.image-box {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+      }
+    }
+    #widget-message {
+      color: $complete-white;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 14px;
+      background: #009cfc; /* Old browsers */
+      background: -moz-linear-gradient(-45deg, #009cfc 0%, #65ce8f 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, #009cfc 0%,#65ce8f 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, #009cfc 0%,#65ce8f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#65ce8f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+  }
+}

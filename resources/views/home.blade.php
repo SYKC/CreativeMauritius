@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-<h1 class="site-title">Karusmoment</h1>
+<div class="container" id="container-top">
+<h1 class="site-title">{{ config('app.name', 'Creative Mauritius') }}</h1>
 <p id="tagline">
-  Moments can be
-  <span class="underline">decisive</span>,
-  <span class="underline">important</span>,
-  <span class="underline">memorable</span>,
-  <span class="underline">unique</span>
+  Discover
+  <span class="underline">art</span>,
+  <span class="underline">culture</span>,
+  <span class="underline">history</span>,
+  <span class="underline">talent</span>
 </p>
 </div>
 <div class="container">
