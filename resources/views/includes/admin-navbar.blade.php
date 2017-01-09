@@ -25,7 +25,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                           {{ Auth::user()->name }}
-                          <img class="navbar-avatar" src="{{ URL::to('/', $secure) }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
+                          <img class="navbar-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
                           <span class="caret"></span>
                         </a>
 
@@ -35,13 +35,13 @@
                            </li>
 
                             <li>
-                                <a href="{{ url('/logout') }}"
+                                <a href="{{ URL::secure('/logout') }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                     Logout
                                 </a>
 
-                                <form id="logout-form" action="{{ URL::to('/logout', $secure)') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ URL::secure('/logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
                             </li>
