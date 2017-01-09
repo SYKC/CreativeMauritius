@@ -32,7 +32,9 @@ require __DIR__.'/../bootstrap/autoload.php';
 | the responses back to the browser and delight our users.
 |
 */
-SassCompiler::run("resources/assets/sass/", "public/css/");
+if (App::environment() == 'local' {
+  SassCompiler::run("resources/assets/sass/", "public/css/");
+}
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 /*
