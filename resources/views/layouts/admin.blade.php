@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/5.22.1/css/themes/beagle.min.css" type="text/css" media="screen" charset="utf-8">
 
     <!-- Core CSS files -->
-    <link href="{{ URL::asset('css/admin.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet" type="text/css">
 
     <script>
         window.Laravel = <?php echo json_encode([
