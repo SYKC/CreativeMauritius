@@ -23,8 +23,8 @@
               </ul>
               <ul class="navbar-right">
                 @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
+                    <li><a href="{{ URL::secure('/login') }}">Login</a></li>
+                    <li><a href="{{ URL::secure('/register') }}">Register</a></li>
                   @else
                       <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -38,13 +38,13 @@
                              </li>
 
                               <li>
-                                  <a href="{{ url('/logout') }}"
+                                  <a href="{{ URL::secure('/logout') }}"
                                       onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                       Logout
                                   </a>
 
-                                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                  <form id="logout-form" action="{{ URL::secure('/logout') }}" method="POST" style="display: none;">
                                       {{ csrf_field() }}
                                   </form>
                               </li>
@@ -76,7 +76,7 @@
                   @else
                       <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <img class="navbar-avatar" src="{{ URL::to('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
+                            <img class="navbar-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>
 
@@ -86,13 +86,13 @@
                              </li>
 
                               <li>
-                                  <a href="{{ url('/logout') }}"
+                                  <a href="{{ URL::secure('/logout') }}"
                                       onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                       Logout
                                   </a>
 
-                                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                  <form id="logout-form" action="{{ URL::secure('/logout') }}" method="POST" style="display: none;">
                                       {{ csrf_field() }}
                                   </form>
                               </li>
