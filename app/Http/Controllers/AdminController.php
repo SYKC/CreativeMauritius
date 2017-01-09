@@ -32,7 +32,7 @@ class AdminController extends Controller
 
      public function index() {
        $username = Auth::user()->username;
-       if (Auth::user()->id !== 10) {
+       if (Auth::user()->id === 0) {
          return redirect()->route('user.profile', [$username]);
        }
        else {
