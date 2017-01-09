@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+  /*Change to return view('/'); when out of beta*/
+    return view('beta');
 });
 
 Route::get('register', function () {
