@@ -8,6 +8,9 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+html {
+  background-color: $big-stone;
+}
 body {
     background-color: $white-smoke;
     h1.site-title {
@@ -30,6 +33,16 @@ body {
         border: 1px solid $brand-primary;
         margin: -40px 0 0 0;
     }
+    .homepage-impression {
+      width: 100%;
+      height: 100vh;
+      background-color: $big-stone;
+    }
+}
+
+a, a:visited, a:hover, a:active, a:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 #container-top {
@@ -365,10 +378,51 @@ p#welcome-message, p#rank {
 }
 
 img.navbar-avatar {
-  width: 30px;
-  height: 30px;
-  margin: 0 4px 0 0;
-  border-radius: 50px;
+  width: 47px;
+  height: 45px;
+  float: right;
+  margin: 0 -28px 0 10px;
+  border-radius: 2px;
+}
+
+span.navbar-name {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.dropdown.open {
+  background-color: #17D6B6;
+  height: 45px;
+  border-radius: 4px;
+}
+
+ul.navbar-avatar-container {
+  top: 8px;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+}
+
+li.main-menu-items {
+  display: inline-block;
+  position: relative;
+}
+
+li.main-menu-items:after {
+  content: '';
+  width: 0px;
+  height: 3px;
+  margin: auto;
+  display: block;
+  background: transparent;
+  transition: width 500ms ease, background-color 500ms ease;
+}
+
+li.main-menu-items:hover:after {
+  width: 100%;
+  background: $pomegranate;
 }
 
 input#avatar {
@@ -377,13 +431,19 @@ input#avatar {
     padding: 10px;
 }
 
+.navbar-scroll {
+  background-color: $big-stone;
+  -webkit-box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
+  -moz-box-shadow:    0px 7px 28px 0px rgba(66, 135, 255, 0.1);
+  box-shadow:         0px 7px 28px 0px rgba(66, 135, 255, 0.1);
+}
+
 .navbar-default {
   border: none;
   height: 80px;
   padding: 10px;
-  -webkit-box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
-  -moz-box-shadow:    0px 7px 28px 0px rgba(66, 135, 255, 0.1);
-  box-shadow:         0px 7px 28px 0px rgba(66, 135, 255, 0.1);
+  background: none;
+  color: $complete-white;
   .navbar-toggle {
     border: none;
     margin-top: -6px;
@@ -419,30 +479,17 @@ input#avatar {
   background: -webkit-linear-gradient(-45deg, $azure-radiance 0%,#4fbcf7 60%,#7dd1ed 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, $azure-radiance 0%,#4fbcf7 60%,#7dd1ed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$azure-radiance', endColorstr='#7dd1ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  #small-menu-mobile, #duplicate-menu {
-    width: inherit;
-    display: inline-block;
-    background-color: $azure-radiance;
-    list-style: none;
-    font-family: $font-cabin;
-    ul {
-      list-style: none;
-      li {
-        margin: 10px 25px 0 0;
-        color: $complete-white;
-        display: inline-block;
-        a {
-          color: $complete-white;
-        }
-      }
-    }
-  }
   #large-menu {
     width: inherit;
     top: 45px;
     padding: 30px;
     position: relative;
   }
+}
+
+.dropdown-menu {
+    width: 250px;
+    margin: 12px -30px 0 0px;
 }
 
 @media all and (max-width: 768px) {
@@ -453,24 +500,31 @@ input#avatar {
   #menu-trigger {
     display: none !important;
   }
+
+  .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus {
+    margin: 0px;
+    border: none;
+    width: 100%;
+    background: none;
+  }
+
+  #app-navbar-collapse {
+    display: block;
+  }
 }
 
 
 @media all and (max-width: 2000px) {
+  #main-menu {
+    display: none !important;
+  }
   #small-menu-visible {
-    width: 100%;
     display: inline-block;
     list-style: none;
     font-family: "Cabin", sans-serif;
-    top: 80px;
+    top: 12px;
     position: fixed;
     left: 0;
-    box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.2);
-    background: #009cfc; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #009cfc 0%, #71ceef 100%, #b7deed 100%, #b7deed 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #009cfc 0%,#71ceef 100%,#b7deed 100%,#b7deed 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #009cfc 0%,#71ceef 100%,#b7deed 100%,#b7deed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#b7deed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     ul {
       list-style: none;
       li {
@@ -483,14 +537,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', end
       }
     }
   }
-}
+  #menu-trigger, #menu-mobile {
+    cursor: pointer;
+    padding: 6px;
+    background-color: #009CFC;
+    color: #F5F5F5;
+    border-radius: 2px;
+    position: absolute;
+    margin-top: 8px;
+  }
 
-#menu-trigger, #menu-mobile {
-  cursor: pointer;
-  padding: 6px;
-  background-color: #009CFC;
-  color: #F5F5F5;
-  border-radius: 2px;
 }
 
 .preview {
@@ -498,7 +554,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', end
 }
 
 .ion-navicon-round {
-  font-size: 32px;
+  font-size: 20px;
 }
 
 /* ----------- iPhone 4 and 4S ----------- */
@@ -529,6 +585,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', end
     #mega-navigation {
       top: 24px;
       position: relative;
+    }
+
+    #small-menu-visible  {
+      width: 100%;
     }
 
     #art {

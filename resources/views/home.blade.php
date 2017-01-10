@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+  <div class="homepage-impression">
+    <h1>Hello</h1>
+  </div>
 <div class="container" id="container-top">
 <h1 class="site-title">{{ config('app.name', 'Creative Mauritius') }}</h1>
 <p id="tagline">

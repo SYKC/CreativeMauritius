@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Creative Mauritius') }}</title>
 
     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
