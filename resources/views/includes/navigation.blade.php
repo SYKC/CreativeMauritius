@@ -98,13 +98,17 @@
 </script>
 
 <script>
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 500) {
-
-        $(".navbar-default").addClass(".navbar-scroll");
-    }
+$(document).ready(function() {
+	var s = $(".navbar-default");
+	var pos = s.position();
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= 780) {
+			s.addClass("navbar-scroll");
+		} else {
+			s.removeClass("navbar-scroll");
+		}
+	});
 });
 </script>
 
