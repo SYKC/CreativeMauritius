@@ -43,7 +43,7 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 
-    @if(Request::url() === URL::secure('home'))
+    @if(Request::url() === URL::secure('home') || Request::url() === URL::to('home'))
       <script>
       //applies blur filter on parallax image while scrolling
           $(window).on('scroll', function () {
