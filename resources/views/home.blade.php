@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
   <div class="homepage-impression">
     <h1>Hello</h1>

@@ -42,6 +42,40 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+
+    @if(Request::url() === URL::secure('/home'))
+      <script>
+      //applies blur filter on parallax image while scrolling
+          $(window).on('scroll', function () {
+          var pixs = $(document).scrollTop()
+          pixs = pixs / 500;
+          $(".homepage-impression").css({"-webkit-filter": "grayscale("+pixs+")","filter": "grayscale("+pixs+")" })
+      });
+      </script>
+
+      <script>
+      $(document).ready(function() {
+        var navigation = $(".navbar-default");
+        var pos = navigation.position();
+        $(window).scroll(function() {
+          var windowpos = $(window).scrollTop();
+          if (windowpos >= 700) {
+            navigation.addClass("navbar-scroll");
+          } else {
+            navigation.removeClass("navbar-scroll");
+          }
+        });
+      });
+      </script>
+    @else
+      <script>
+      $(document).ready(function() {
+        var navigation = $(".navbar-default");
+        navigation.addClass("navbar-scroll");
+      });
+      </script>
+    @endif
+
     <script>
     var data1 = document.getElementById("user-id").innerHTML
     var ctx = document.getElementById("my-progress")

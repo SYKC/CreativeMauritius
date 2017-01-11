@@ -32,8 +32,11 @@
 
             <ul class="navbar-right navbar-avatar-container">
               @if (Auth::guest())
+                <div class="auth">
                   <li><a href="{{ URL::secure('/login') }}">Login</a></li>
+                  <span> / </span>
                   <li><a href="{{ URL::secure('/register') }}">Register</a></li>
+                </div>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -63,6 +66,37 @@
             </ul>
 
           <div id="mega-navigation">
+            <ul class="navbar-right navbar-avatar-container-mobile">
+              @if (Auth::guest())
+                  <li><a href="{{ URL::secure('/login') }}">Login</a></li>
+                  <li><a href="{{ URL::secure('/register') }}">Register</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                          <img class="navbar-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
+                            <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->name }}</span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                           <li>
+                                <a href="{{ URL::secure('/') }}/user/{{ Auth::user()->username }}"> View Profile</a>
+                           </li>
+
+                            <li>
+                                <a href="{{ URL::secure('/logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ URL::secure('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
+            </ul>
             <div id="main-menu">
               <!--Responsive menu content-->
             </div>
@@ -87,30 +121,6 @@
         </div>
     </div>
 </nav>
-
-<script>
-//applies blur filter on parallax image while scrolling
-    $(window).on('scroll', function () {
-    var pixs = $(document).scrollTop()
-    pixs = pixs / 500;
-    $(".homepage-impression").css({"-webkit-filter": "grayscale("+pixs+")","filter": "grayscale("+pixs+")" })
-});
-</script>
-
-<script>
-$(document).ready(function() {
-	var s = $(".navbar-default");
-	var pos = s.position();
-	$(window).scroll(function() {
-		var windowpos = $(window).scrollTop();
-		if (windowpos >= 780) {
-			s.addClass("navbar-scroll");
-		} else {
-			s.removeClass("navbar-scroll");
-		}
-	});
-});
-</script>
 
 <script>
 $('#menu-trigger').click(function() {
