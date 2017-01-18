@@ -92,6 +92,18 @@ a, a:visited, a:hover, a:active, a:focus {
   background-color: #eee;
 }
 
+#container-auth {
+  width: 100% !important;
+  margin-top: 100px;
+  position: relative;
+  background-color: #eee;
+  height: 100vh;
+}
+
+.panel-default {
+  margin-top: 50px;
+}
+
 #container-top-profile {
   margin-top: 200px;
 }
