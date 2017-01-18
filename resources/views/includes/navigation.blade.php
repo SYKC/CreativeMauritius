@@ -15,10 +15,9 @@
             <div id="small-menu-visible">
               <ul class="navbar-left" id="left-section">
                 <li class="main-menu-items"> Blog </li>
-                <li class="main-menu-items"> About Us </li>
+                <li class="main-menu-items"> Projects </li>
                 <li class="main-menu-items"> Resources </li>
-                <li class="main-menu-items"> Interactive Map </li>
-                <li class="main-menu-items"> Inspiring Stories </li>
+                <li class="main-menu-items"> Collective </li>
               </ul>
             </div>
 

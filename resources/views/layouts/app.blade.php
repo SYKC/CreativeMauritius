@@ -12,14 +12,15 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ secure_asset('css/ink-css/ink.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
@@ -49,7 +50,7 @@
           $(window).on('scroll', function () {
           var pixs = $(document).scrollTop()
           pixs = pixs / 500;
-          $(".homepage-impression").css({"-webkit-filter": "grayscale("+pixs+")","filter": "grayscale("+pixs+")" })
+          $(".showcase-container").css({"-webkit-filter": "grayscale("+pixs+")","filter": "grayscale("+pixs+")" })
       });
       </script>
 

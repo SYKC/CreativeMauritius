@@ -59,6 +59,7 @@ class ProfileController extends Controller
       $avatar = $request->file('avatar');
 
       //Chmod 777 the image directory for writing images
+      // sudo chmod -R 777 /var/www/laravel/public/uploads/avatars
 
       if($request->hasFile('avatar')) {
         $filename = $username . '-' . time() . '-' . 'avatar' . '.' . $avatar->getClientOriginalExtension();
