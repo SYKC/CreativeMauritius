@@ -17,6 +17,7 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="{{ route('dashboard.posts') }}"><i class="icon-set ion-ios-compose-outline"><span class="menu-caption"> New Post </span></i></a></li>
+                <li><a href="{{ route('dashboard.written') }}"><i class="icon-set ion-ios-list-outline"><span class="menu-caption"> Articles </span></i></a></li>
                 <li><a href="{{ route('dashboard.media') }}"><i class="icon-set ion-ios-camera-outline"><span class="menu-caption"> Media </span></i></a></li>
                 <li><a href="{{ route('dashboard.posts') }}"><i class="icon-set ion-ios-pie-outline"><span class="menu-caption"> Stats </span></i></a></li>
                 <li><a href="{{ route('dashboard.posts') }}"><i class="icon-set ion-ios-pulse"><span class="menu-caption"> Network </span></i></a></li>

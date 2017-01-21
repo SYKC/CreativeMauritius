@@ -51,7 +51,7 @@ class PostController extends Controller
       if($request->hasFile('featured_image')) {
         $filename = time() . '-' . 'cover' . '.' . $post->featured_image->getClientOriginalExtension();
         $path = public_path('uploads/covers/' . $filename);
-        Image::make($post->featured_image->getRealPath())->resize(200,200)->save($path);
+        Image::make($post->featured_image->getRealPath())->save($path);
         $post->featured_image = $filename;
       } else {
         $post->featured_image = "http://webapp.com/uploads/covers/default_cover.jpg";

@@ -31,19 +31,26 @@ class AdminController extends Controller
      */
 
      public function index() {
+       $posts = Post::all();
        $username = Auth::user()->username;
        if (Auth::user()->id === 0) {
          return redirect()->route('user.profile', [$username]);
        }
        else {
-         return view('dashboard.admin');
+         return view('dashboard.admin', ['posts' => $posts]);
        }
      }
 
      public function getMedia()
      {
-       $post = new Post;
-       return view('dashboard.media');
+       $posts = Post::all();
+       return view('dashboard.media', ['posts' => $posts]);
+     }
+
+     public function getWrittenPosts()
+     {
+       $posts = Post::all();
+       return view('dashboard.written', ['posts' => $posts]);
      }
 
      public static function getRoutes()

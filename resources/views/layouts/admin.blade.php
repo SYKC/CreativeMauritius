@@ -20,13 +20,16 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    <!-- Styles -->
-    <link href="{{ secure_asset('css/ink-css/ink.min.css') }}">
 
-    <!-- Scripts (Charts.js && Highcharts.js) -->
+    <!-- Styles (DataTables)-->
+    <link href="{{ secure_asset('css/ink-css/ink.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+    <!-- Scripts (Charts.js && Highcharts.js && DataTables) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
     <!-- UiKit -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/uikit.css" />
@@ -70,6 +73,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script>
+    $(document).ready( function () {
+      $('#posts_table').DataTable();
+    });
+    </script>
 </body>
 </html>

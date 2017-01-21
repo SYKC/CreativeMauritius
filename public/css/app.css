@@ -7794,6 +7794,10 @@ a, a:visited, a:hover, a:active, a:focus {
   margin-top: 200px;
 }
 
+#container-top-blog {
+  margin-top: 100px;
+}
+
 .featured-container {
   width: 100%;
   height: 300px;
@@ -8305,6 +8309,11 @@ input#avatar {
 .auth {
   top: 10px;
   position: relative;
+}
+
+.blog-banner {
+  width: 100%;
+  max-width: 400px;
 }
 
 @media (min-width: 1200px) {

@@ -23,6 +23,7 @@ Route::get('register', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/blog', 'BlogController@index');
 
 Route::get('/dashboard', 'AdminController@index');
 
@@ -39,6 +40,11 @@ Route::post('/dashboard/posts/create/new', [
 Route::get('/dashboard/media', [
   'uses' => 'AdminController@getMedia',
   'as' => 'dashboard.media',
+]);
+
+Route::get('/dashboard/posts/all', [
+  'uses' => 'AdminController@getWrittenPosts',
+  'as' => 'dashboard.written',
 ]);
 
 Route::get('user/{username}', [

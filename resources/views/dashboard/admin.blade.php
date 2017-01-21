@@ -10,5 +10,11 @@
       Total Users:
       <span>{{ creativemauritius\Models\User::getAllUsers() }}</span>
     </p>
+    @foreach($posts as $post)
+      <h3>
+        {{ $post->title }}
+      </h3>
+      <img src="http://webapp.com/uploads/covers/{{ $post->featured_image }}">
+    @endforeach
   </div>
 @endsection
