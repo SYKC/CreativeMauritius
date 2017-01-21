@@ -14,7 +14,7 @@
       <h3>
         {{ $post->title }}
       </h3>
-      <img src="http://webapp.com/uploads/covers/{{ $post->featured_image }}">
+      <img src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
     @endforeach
   </div>
 @endsection
