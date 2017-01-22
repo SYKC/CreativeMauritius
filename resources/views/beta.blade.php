@@ -7,8 +7,9 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
  <!--scripts-->
- <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
+ <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.3.0/typeit.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 
  <!--fonts-->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -17,14 +18,15 @@
 
 </head>
 <body>
-	<div class="container">
-	   <p id="message"></p>
+	<div class="container home">
+	   <h1 class="headline animated fadeInUp">Creative <span class="dot">.</span> Mauritius</h1>
+     <span class="tagline animated fadeIn">Creativity <span class="dot">.</span> Data <span class="dot">.</span> Outcomes</span>
+     <p id="message"></p>
 	</div>
 
 	<div id="social">
 	<p id="social-links">Contribute or connect with us!</p>
-		<a href="https://twitter.com/createmauritius"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-		<a href="https://twitter.com/createmauritius"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		<a href="https://github.com/VEEGISHx/creativemauritius/"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
 	</div>
 
 	<div id="down">
@@ -52,11 +54,11 @@
 		.tiPause(750)
 		.tiSettings({speed: 50})
 		.tiDelete()
-		.tiType('I don\'t get a lot of visitors since my masters are still building me :( ')
+		.tiType('I don\'t get a lot of visitors since my creators are still building me :( ')
 		.tiBreak().tiPause(500)
 		.tiType('But it\'s not that bad. ')
 		.tiPause(500)
-		.tiType('I know my masters are taking their time to puurrfec')
+		.tiType('I know my creators are taking their time to puurrfec')
 		.tiPause(500)
 		.tiDelete(7)
 		.tiType('ur')
@@ -114,20 +116,41 @@
 
 		setInterval(function() {
 			document.getElementById('social').style.display = "block";
-		}, 112000);
+		}, 66000);
 	</script>
 
 
 	<style type="text/css">
 	    body {
 	    	color: #1E3746;
-	    	background-color: #FFE164; 
+	    	background-color: #FFE164;
 	    }
+
+      .home {
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+      }
+
+      .headline {
+        font-size: 80px;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      span.dot {
+        color: #F6471E;
+      }
+
+      .tagline {
+        top: -40px;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+      }
 
 		.container {
 			width: 80%;
 			padding: 60px;
-			margin: 40px 76px;
+			margin: 0px auto;
 		}
 
 		p#message {
@@ -211,8 +234,8 @@
 		/* ----------- iPhone 4 and 4S ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
   		.container {
@@ -223,8 +246,8 @@
 }
 
 /* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
@@ -236,8 +259,8 @@
 }
 
 /* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {

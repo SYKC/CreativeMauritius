@@ -10,7 +10,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-
+              <img class="logo-navbar" src="https://res.cloudinary.com/xdisrupt/image/upload/v1484905525/creativemauritius.com/Final_Logo_transparent.png" alt="Creative Mauritius">
             </a>
             <div id="small-menu-visible">
               <ul class="navbar-left" id="left-section">

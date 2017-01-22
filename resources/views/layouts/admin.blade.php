@@ -50,6 +50,9 @@
     <!-- Dependency: Marked -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
 
+    <!-- Loading separate Bootstrap minified JS due to app.js causing conflicts-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/5.22.1/css/themes/beagle.min.css" type="text/css" media="screen" charset="utf-8">
@@ -71,6 +74,11 @@
         @yield('content')
 
     </div>
+    <script>
+    $(document).ready(function() {
+      $('dropdown-toggle').dropdown()
+    });
+    </script>
 
     <!-- Scripts -->
     <script>

@@ -58,13 +58,16 @@
       <script>
       $(document).ready(function() {
         var navigation = $(".navbar-default");
+        var logo = $(".logo-navbar");
         var pos = navigation.position();
         $(window).scroll(function() {
           var windowpos = $(window).scrollTop();
           if (windowpos >= 700) {
             navigation.addClass("navbar-scroll");
+            logo.addClass("scroll-show")
           } else {
             navigation.removeClass("navbar-scroll");
+            logo.removeClass("scroll-show");
           }
         });
       });

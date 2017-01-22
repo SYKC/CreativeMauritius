@@ -8316,6 +8316,24 @@ input#avatar {
   max-width: 400px;
 }
 
+.logo-navbar {
+  opacity: 0;
+  left: 70px;
+  width: 100%;
+  max-width: 40px;
+  position: absolute;
+  display: block !important;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.scroll-show {
+  opacity: 1;
+  display: block !important;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
 @media (min-width: 1200px) {
   #left-section {
     margin-left: 100px;
