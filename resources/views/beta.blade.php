@@ -133,7 +133,7 @@
       }
 
       .headline {
-        font-size: 80px;
+        font-size: 8.5vh;
         font-family: 'Montserrat', sans-serif;
       }
 
@@ -193,8 +193,8 @@
 		#social {
 			width: 80%;
 			display: none;
-			padding: 60px;
-			margin: 40px 76px;
+			padding: 0px;
+			margin: 0px auto;
 			text-align: center;
 		}
 
