@@ -7701,6 +7701,43 @@ html, body {
   color: #00D054;
 }
 
+#app {
+  animation: fadein 500ms;
+  -moz-animation: fadein 500ms;
+  -webkit-animation: fadein 500ms;
+  -o-animation: fadein 500ms;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Firefox */
+
+/* Safari, Chrome */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 11px;
   margin-bottom: 2px;
@@ -7787,7 +7824,12 @@ img.navbar-avatar {
 }
 
 #admin-panel {
-  margin: 20px 10% 0 4%;
+  margin: 0px auto;
+}
+
+.blog-post-wrapper {
+  top: 60px;
+  position: relative;
 }
 
 #post-editor, #post-title, #post-title-input, #post-tags, #post-tags-input {
@@ -7810,6 +7852,7 @@ img.navbar-avatar {
   right: 16px;
   top: 4px;
   float: left;
+  margin-bottom: 100px;
 }
 
 #post-editor-sidebar .featured-image-widget {
@@ -7844,6 +7887,91 @@ img.navbar-avatar {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#65ce8f',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
+}
+
+#post-editor-sidebar .btn-publish {
+  width: 100%;
+  height: 50px;
+  color: #eee;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background-color: #009CFC;
+}
+
+#post-editor-sidebar .btn-publish:hover {
+  border: 1px solid #009CFC;
+  background-color: #1fa9ff !important;
+}
+
+.success-message {
+  width: 100%;
+  text-align: center;
+  animation: slideInAlert 500ms;
+  -moz-animation: slideInAlert 500ms;
+  -webkit-animation: slideInAlert 500ms;
+  background-color: #2ab27b;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.error-message {
+  width: 100%;
+  text-align: center;
+  animation: slideInAlert 500ms;
+  -moz-animation: slideInAlert 500ms;
+  -webkit-animation: slideInAlert 500ms;
+  background-color: #bf5329;
+  color: #fff;
+  position: fixed;
+  top: -25px;
+  left: 0;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+@keyframes slideInAlert {
+  0% {
+    top: -55px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes slideInAlert {
+  0% {
+    top: -55px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/* Dashboard main section */
+.dashboard-main {
+  margin-bottom: 150px;
+}
+
+.latest-posts-body {
+  margin-bottom: 20px;
+}
+
+figure:hover > .latest-posts-excerpt {
+  cursor: pointer;
+  background-color: #eeeeff;
+}
+
+.latest-posts-excerpt {
+  background-color: #eee;
+  padding: 8px;
 }
 
 /*# sourceMappingURL=admin.css.map */

@@ -75,11 +75,38 @@
     @else
       <script>
       $(document).ready(function() {
+        var logo = $(".logo-navbar");
+        logo.css("opacity","1");
         var navigation = $(".navbar-default");
         navigation.addClass("navbar-scroll");
       });
       </script>
     @endif
+
+    <script>
+    if ($('#article-header').length > 0) {
+      $(document).ready(function() {
+        var title = $(".article-title").text();
+        var unstyled =$("#article-title-section");
+        var menulist = $("li.main-menu-items");
+        var flag = false;
+        $(window).scroll(function() {
+          var windowpos = $(window).scrollTop();
+          if (windowpos >= 100) {
+            unstyled.css({"display": "inline-block", "opacity": "1 !important"});
+            menulist.addClass("article-title-wrapper");
+            if(!flag){
+              unstyled.append(title);
+              flag = true;
+            }
+          } else {
+            unstyled.css("display", "none");
+            menulist.removeClass("article-title-wrapper");
+          }
+        });
+      });
+    }
+    </script>
 
     <script>
     var data1 = document.getElementById("user-id").innerHTML

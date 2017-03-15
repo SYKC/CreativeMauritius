@@ -18,6 +18,7 @@
                 <li class="main-menu-items"> Projects </li>
                 <li class="main-menu-items"> Resources </li>
                 <li class="main-menu-items"> Collective </li>
+                <span id="article-title-section"></span>
               </ul>
             </div>
 

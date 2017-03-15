@@ -27,21 +27,47 @@ Route::get('/blog', 'BlogController@index');
 
 Route::get('/dashboard', 'AdminController@index');
 
+//---------------Routing for Projects---------------
+//------------We are making history here------------
+// ------------->Create a new Project<-------------//
+Route::get('/dashboard/projects/create', [
+  'uses' => 'ProjectController@getPage',
+  'as' => 'dashboard.projects.index',
+]);
+
+// ------------->Publish a new Project<-------------//
+Route::post('/dashboard/projects/create/publish', [
+  'uses' => 'ProjectController@publishProject',
+  'as' => 'project.publish',
+]);
+
+//--------------------------&&--------------------------//
+//-----------------Routing for Blog Posts---------------
+// ------------->Write a blog article<-------------//
 Route::get('/dashboard/posts/create', [
   'uses' => 'PostController@getPage',
   'as' => 'dashboard.posts',
 ]);
 
+// ------------->Post a blog article<-------------//
 Route::post('/dashboard/posts/create/new', [
   'uses' => 'PostController@createPost',
   'as' => 'post.create',
 ]);
 
+// ------------->Read a blog article<-------------//
+Route::get('/blog/posts/{id}', [
+  'uses' => 'PostController@readPost',
+  'as' => 'post.read',
+]);
+
+//Get a gallery of images uploaded for posts
 Route::get('/dashboard/media', [
   'uses' => 'AdminController@getMedia',
   'as' => 'dashboard.media',
 ]);
 
+//Get a list of all posts
 Route::get('/dashboard/posts/all', [
   'uses' => 'AdminController@getWrittenPosts',
   'as' => 'dashboard.written',

@@ -2,7 +2,14 @@
 @section('content')
   @include('includes.alerts')
   <div class="container" id="admin-panel">
-    <form class="uk-form uk-form-stacked" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
+    @if(Session::has('success-message'))
+      <div class="success-message"><span class="ion-ios-checkmark-outline"></span> {{ session('success-message') }}</div>
+    @endif
+
+    @if(Session::has('error-message'))
+      <div class="error-message"><span class="ion-ios-close-outline"></span> {{ session('error-message') }}</div>
+    @endif
+    <form class="uk-form uk-form-stacked blog-post-wrapper" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
       <div class="form-wrap">
         <fieldset>
           <div class="uk-form-row" id="post-title">
@@ -31,10 +38,10 @@
 
       <div class="uk-form-row" id="post-tags">
         <label class="uk-form-label" for="post-tags">Associate some tags</label>
-        <input type="text" class="uk-form-controls" id="post-tags-input" name="post-tags" placeholder="Enter some tags">
+        <input type="text" class="uk-form-controls" id="post-tags-input" name="post-tags" placeholder="Separate your tags with a comma">
       </div>
       </fieldset>
-      <button type="submit" class="uk-button">Publish</button>
+      <button type="submit" class="uk-button btn-publish">Publish</button>
       <input type="hidden" value="{{ Session::token() }}" name="_token">
     </div>
   </form>

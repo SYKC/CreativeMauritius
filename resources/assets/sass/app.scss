@@ -589,6 +589,7 @@ input#avatar {
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border: none;
   border-color: #009CFC;
+  box-shadow: none;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -601,7 +602,7 @@ input#avatar {
 }
 
 #mega-navigation {
-  top: 80px;
+  top: 0;
   left: 0;
   width: 100%;
   height: auto;
@@ -656,6 +657,128 @@ input#avatar {
 .blog-banner {
   width: 100%;
   max-width: 400px;
+}
+
+#article-header {
+  padding: 10px;
+  min-height: 150px;
+  text-align: center;
+  background-color: #EEEEEE;
+}
+
+
+.article-title-wrapper {
+  position: relative;
+  display: none !important;
+}
+
+#article-title-section:hover > #article-title-section:before {
+  font-family: "Ionicons";
+  content: "\f366";
+  padding-right: 6px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#article-title-section {
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  border-bottom: 1px solid $complete-white;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#article-title-section:hover {
+  border-bottom: 1px solid #F6471E;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.post-cover-bg {
+  margin-bottom: 50px;
+}
+
+.img-cover {
+  width: 100%;
+}
+
+#article-body {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.headstart {
+  font-family: 'Yeseva One', cursive;
+  font-size: 25px;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid;
+  margin: 7px;
+}
+
+#main-wrapper {
+  margin-top: 100px;
+}
+
+.blog-post-container {
+  width: 100%;
+  background-attachment: $white-smoke;
+  .post-cover-bg {
+  }
+}
+
+h1.article-title {
+  color: #142433;
+  font-family: 'Yeseva One', cursive;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  #title {
+    text-align: left;
+    margin: 0 20% 0 20%;
+    h1.article-title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #title {
+    text-align: left;
+    margin: 0 20% 0 20%;
+    h1.article-title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  #title {
+    text-align: left;
+    margin: 0  0 8%;
+    h1.article-title {
+      font-size: 26px;
+    }
+  }
+}
+
+[data-description*="security"] {
+  color: #00ff00 !important;
+  text-decoration: underline !important;
+  text-decoration-style: double !important;
+}
+
+[data-description*="politics"] {
+  color: $azure-radiance !important;
+  text-decoration: underline !important;
+  text-decoration-style: double !important;
 }
 
 .logo-navbar {
@@ -959,4 +1082,9 @@ input#avatar {
       position: relative;
       background-color: $big-stone !important;
     }
+}
+
+/* Bootstrap stylesheets */
+.row {
+  margin-right: 0px !important;
 }

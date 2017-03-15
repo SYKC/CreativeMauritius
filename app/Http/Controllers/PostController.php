@@ -17,10 +17,13 @@ class PostController extends Controller
      *
      * @return void
      */
+
+     /*
      public function __construct()
      {
          $this->middleware('auth');
      }
+     */
 
     /**
      * Show the application admin dashboard.
@@ -30,10 +33,12 @@ class PostController extends Controller
      public function getPage()
     {
       return view('dashboard.posts');
+      $this->middleware('auth');
     }
 
     public function createPost(Request $request)
     {
+      $this->middleware('auth');
       $this->validate($request, [
         'post-title' => 'required',
         'post-body' => 'required',
@@ -54,14 +59,24 @@ class PostController extends Controller
         Image::make($post->featured_image->getRealPath())->save($path);
         $post->featured_image = $filename;
       } else {
-        $post->featured_image = "http://webapp.com/uploads/covers/default_cover.jpg";
+        $post->featured_image = "default_cover.jpg";
       }
 
       if ($request->user()->posts()->save($post))
       {
         $message = 'Your article has been successfully published.';
+              return redirect()->route('dashboard.posts')->with(['success-message' => $message]);
+      } else {
+        $message = 'Sorry, an error occurred. Please try again later.';
+              return redirect()->route('dashboard.posts')->with(['error-message' => $message]);
       }
-      return redirect()->route('dashboard.posts')->with(['message' => $message]);
+    }
+
+    public function readPost($id)
+    {
+      $this->middleware('guest');
+      $getPost = Post::find($id);
+      return view('post.read')->with('post', $getPost);
     }
 
 }
