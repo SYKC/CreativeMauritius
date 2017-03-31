@@ -270,6 +270,36 @@ img.navbar-avatar {
   }
 }
 
+/*Dashboard Post list*/
+.edit-editable-post {
+  background-color: $big-stone;
+  color: $complete-white;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.edit-editable-post:before {
+  font-family: 'ionicons';
+  content: '\f2bf';
+  margin-right: 4px;
+}
+
+.view-editable-post {
+  padding: 4px;
+  border-radius: 2px;
+  color: $complete-white;
+  background-color: $java;
+}
+
+.view-editable-post:before {
+  font-family: 'ionicons';
+  content: '\f133';
+  margin-right: 4px;
+}
+
+.view-editable-post:hover {
+  color: $white-smoke;
+}
 
 /* Dashboard main section */
 .dashboard-main {

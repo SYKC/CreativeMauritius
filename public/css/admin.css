@@ -7873,7 +7873,7 @@ img.navbar-avatar {
 }
 
 #post-editor-sidebar .featured-image-widget #widget-message {
-  color: #fff;
+  color: #FFF;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   padding: 14px;
@@ -7953,6 +7953,37 @@ img.navbar-avatar {
   100% {
     top: 0;
   }
+}
+
+/*Dashboard Post list*/
+.edit-editable-post {
+  background-color: #142433;
+  color: #FFF;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.edit-editable-post:before {
+  font-family: 'ionicons';
+  content: '\f2bf';
+  margin-right: 4px;
+}
+
+.view-editable-post {
+  padding: 4px;
+  border-radius: 2px;
+  color: #FFF;
+  background-color: #17D6B6;
+}
+
+.view-editable-post:before {
+  font-family: 'ionicons';
+  content: '\f133';
+  margin-right: 4px;
+}
+
+.view-editable-post:hover {
+  color: #F5F5F5;
 }
 
 /* Dashboard main section */
