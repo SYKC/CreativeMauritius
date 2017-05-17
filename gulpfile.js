@@ -16,5 +16,6 @@ require('laravel-elixir-vue-2');
 elixir(mix => {
     mix.sass('app.scss', './public/css/app.css')
         .sass('admin.scss', './public/css/admin.css')
-        .webpack('app.js');
+        .webpack('app.js')
+        .webpack('functions.js');
 });

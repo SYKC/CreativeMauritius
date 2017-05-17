@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,500,900" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Styles (DataTables)-->
@@ -40,7 +40,12 @@
     <!-- UiKit HTML Editor dependencies-->
 
     <!-- Dependency: CodeMirror -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/mode/markdown/markdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/addon/mode/overlay.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/mode/xml/xml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/mode/gfm/gfm.js"></script>
 
     <!-- Dependency: Marked -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
@@ -67,11 +72,9 @@
     <!-- Core CSS files -->
     <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet" type="text/css">
 
-    <script>
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
+    <script src="{{ secure_asset('js/functions.js') }}"></script>
+
+
 </head>
 <body onload="init();">
   @include('includes.admin-navbar')
@@ -81,6 +84,7 @@
         @yield('content')
 
     </div>
+
     <script>
     $(document).ready(function() {
       $('dropdown-toggle').dropdown()

@@ -12,13 +12,14 @@
     <form class="uk-form uk-form-stacked blog-post-wrapper" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
       <div class="form-wrap">
         <fieldset>
-          <div class="uk-form-row" id="post-title">
+          <div class="uk-form-row" class="post-title">
             <label class="uk-form-label" for="post-title">Title</label>
             <input type="text" class="uk-form-controls" id="post-title-input" name="post-title" placeholder="Enter a title">
           </div>
 
-          <div class="uk-form-row" id="firepad">
-            <label class="uk-form-label" for="post-body">Write your story</label>
+          <div id="userlist"></div>
+          <div class="uk-form-row" id="firepad" name="post-body">
+            <label class="uk-form-label" for="firepad">Write your story</label>
               <script>
     function init() {
       //// Initialize Firebase.
@@ -64,6 +65,7 @@
       return ref;
     }
   </script>
+  
           </div>
       </div>
 
@@ -90,4 +92,12 @@
     </div>
   </form>
 </div>
+        <script>
+    setTimeout(function()
+    {
+        var articleBox = document.querySelector("textarea");
+        articleBox.setAttribute("id", "post-body");
+        articleBox.setAttribute("name", "post-body"); 
+    }, 5000);
+</script>
 @endsection
