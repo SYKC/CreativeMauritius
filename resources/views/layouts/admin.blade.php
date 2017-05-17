@@ -40,12 +40,7 @@
     <!-- UiKit HTML Editor dependencies-->
 
     <!-- Dependency: CodeMirror -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/codemirror.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/mode/markdown/markdown.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/addon/mode/overlay.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/mode/xml/xml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.22.0/mode/gfm/gfm.js"></script>
+
 
     <!-- Dependency: Marked -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
@@ -56,6 +51,18 @@
     <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/5.22.1/css/themes/beagle.min.css" type="text/css" media="screen" charset="utf-8">
+    
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css"/>
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
+    <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
 
     <!-- Core CSS files -->
     <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet" type="text/css">
@@ -66,7 +73,7 @@
         ]); ?>
     </script>
 </head>
-<body>
+<body onload="init();">
   @include('includes.admin-navbar')
     <div id="app">
 

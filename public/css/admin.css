@@ -7696,9 +7696,14 @@ button.close {
   }
 }
 
-html, body {
+html,
+body {
   background-color: #F5F5F5;
   color: #00D054;
+}
+
+#firepad {
+  height: 300px;
 }
 
 #app {
@@ -7738,7 +7743,12 @@ html, body {
   }
 }
 
-h4, .h4, h5, .h5, h6, .h6 {
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   margin-top: 11px;
   margin-bottom: 2px;
 }
@@ -7796,7 +7806,8 @@ img.navbar-avatar {
   margin-right: 40px;
 }
 
-.navbar-default ul, .navbar-default ol {
+.navbar-default ul,
+.navbar-default ol {
   margin-top: 10px;
   margin-bottom: 11px;
   text-decoration: none;
@@ -7832,7 +7843,11 @@ img.navbar-avatar {
   position: relative;
 }
 
-#post-editor, #post-title, #post-title-input, #post-tags, #post-tags-input {
+#post-editor,
+#post-title,
+#post-title-input,
+#post-tags,
+#post-tags-input {
   width: 100%;
   max-width: 850px;
 }
@@ -7885,8 +7900,6 @@ img.navbar-avatar {
   background: -webkit-linear-gradient(315deg, #009cfc 0%, #65ce8f 100%);
   background: linear-gradient(135deg, #009cfc 0%, #65ce8f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#65ce8f',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 #post-editor-sidebar .btn-publish {
