@@ -3,9 +3,14 @@
 @endif
 
 @if (count($errors) > 0)
+<script type="text/javascript">
+    console.log(location.hash);//here double curly bracket
+</script>
   @foreach ($errors->all() as $error)
-    <li>
+    <div class="error-message" uk-alert>
+      <a class="uk-alert-close" uk-close></a>
       {{ $error }}
-    </li>
+    </div>
+
   @endforeach
 @endif

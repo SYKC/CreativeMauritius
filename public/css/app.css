@@ -3864,27 +3864,27 @@ fieldset[disabled] .btn-info.focus {
 
 .btn-warning {
   color: #fff;
-  background-color: #cbb956;
-  border-color: #c5b143;
+  background-color: #F89406;
+  border-color: #df8505;
 }
 
 .btn-warning:focus, .btn-warning.focus {
   color: #fff;
-  background-color: #b6a338;
-  border-color: #685d20;
+  background-color: #c67605;
+  border-color: #633b02;
 }
 
 .btn-warning:hover {
   color: #fff;
-  background-color: #b6a338;
-  border-color: #9b8a30;
+  background-color: #c67605;
+  border-color: #a36104;
 }
 
 .btn-warning:active, .btn-warning.active,
 .open > .btn-warning.dropdown-toggle {
   color: #fff;
-  background-color: #b6a338;
-  border-color: #9b8a30;
+  background-color: #c67605;
+  border-color: #a36104;
 }
 
 .btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,
@@ -3892,8 +3892,8 @@ fieldset[disabled] .btn-info.focus {
 .open > .btn-warning.dropdown-toggle:focus,
 .open > .btn-warning.dropdown-toggle.focus {
   color: #fff;
-  background-color: #9b8a30;
-  border-color: #685d20;
+  background-color: #a36104;
+  border-color: #633b02;
 }
 
 .btn-warning:active, .btn-warning.active,
@@ -3905,12 +3905,12 @@ fieldset[disabled] .btn-info.focus {
 fieldset[disabled] .btn-warning:hover,
 fieldset[disabled] .btn-warning:focus,
 fieldset[disabled] .btn-warning.focus {
-  background-color: #cbb956;
-  border-color: #c5b143;
+  background-color: #F89406;
+  border-color: #df8505;
 }
 
 .btn-warning .badge {
-  color: #cbb956;
+  color: #F89406;
   background-color: #fff;
 }
 
@@ -5600,11 +5600,11 @@ a.label:hover, a.label:focus {
 }
 
 .label-warning {
-  background-color: #cbb956;
+  background-color: #F89406;
 }
 
 .label-warning[href]:hover, .label-warning[href]:focus {
-  background-color: #b6a338;
+  background-color: #c67605;
 }
 
 .label-danger {
@@ -5918,7 +5918,7 @@ a.thumbnail.active {
 }
 
 .progress-bar-warning {
-  background-color: #cbb956;
+  background-color: #F89406;
 }
 
 .progress-striped .progress-bar-warning {

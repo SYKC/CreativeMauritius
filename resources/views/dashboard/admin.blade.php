@@ -12,17 +12,45 @@
     </p>
 
     <section class="dashboard-main">
-      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <div id="graph-container" style="min-width: 310px; height: 400px;"></div>
+      <div class="row">
+        <div class="col-md-4">
+         <div class="insights-tab">
+          <div class="insights-tab-header">
+            <h3>Some insights</h3>
+          </div>
+          <div class="social-media-widget-container">
+           <div class="social-media-widget center col-sm-6">
+           <span class="social-media-widget-icon ion-social-twitter"></span>
+             <h4>Twitter</h4>
+             <p>21k Followers</p>
+           </div>
+           <div class="social-media-widget center col-sm-6">
+           <span class="social-media-widget-icon ion-social-facebook"></span>
+             <h4>Facebook</h4>
+             <p>50k Likes</p>
+           </div>
+          </div><!--Social media widget container-->
+           <div class="insights-tab-body">
+            <p>New version 2.4.2 available!</p>
+            <h4>200+ articles written</h4>
+          </div>
+        </div>
+      </div>
+      </div><!--End of row-->
+
       <div class="row">
         @foreach ($posts->sortByDesc('id')->slice(0,3) as $post)
         <div class="col-md-4 latest-posts-body">
          <figure>
-           <img src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
+           <img class="dashboard-post-cover" src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
            <figcaption class="latest-posts-excerpt">
              <h3>
                {{ $post->title }}
              </h3>
-             {{ substr($post->body, 0, 120) }}...
+             <p>
+               {{ substr($post->body, 0, 120) }}...
+             </p>
            </figcaption>
          </figure>
         </div>
@@ -30,7 +58,7 @@
       </div>
     </section>
     <script>
-    Highcharts.chart('container', {
+    Highcharts.chart('graph-container', {
     chart: {
         type: 'spline'
     },

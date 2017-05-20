@@ -7,21 +7,25 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
  <!--scripts-->
- <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.3.0/typeit.min.js"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 
  <!--fonts-->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
- <link href="https://fonts.googleapis.com/css?family=Montserrat|Space+Mono" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,900|Satisfy" rel="stylesheet"> 
  <link rel="icon" type="image/png" href="https://res.cloudinary.com/xdisrupt/image/upload/v1482166353/creativemauritius.com/favicon.ico">
 
 </head>
 <body>
 	<div class="container home">
-	   <h1 class="headline animated fadeInUp">Creative <span class="dot">.</span> Mauritius</h1>
+	   <h1 class="headline animated fadeInUp">Creative Mauritius</h1>
      <span class="tagline animated fadeIn">Creativity <span class="dot">.</span> Data <span class="dot">.</span> Outcomes</span>
      <p id="message"></p>
+	</div>
+	
+	<div class="container-links">
+	<button class="btn-login"><i class="fa fa-clock-o" aria-hidden="true"></i>
+ Coming soon</button>
 	</div>
 
 	<div id="social">
@@ -29,12 +33,12 @@
 		<a href="https://github.com/VEEGISHx/creativemauritius/"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
 	</div>
 
-	<div id="down">
-	   <img src="https://res.cloudinary.com/xdisrupt/image/upload/v1482157127/creativemauritius.com/qhMbkGi.gif">
-	   <p id="travolta"></p>
-	</div>
+	<footer class="links">
+	<span class="fb-logo">Powered by</span>
+	<img src="https://res.cloudinary.com/xdisrupt/image/upload/c_scale,w_120/v1495288227/creativemauritius.com/image00.png">
+	</footer>
 
-	<script type="text/javascript">
+<!--  <script type="text/javascript">
 		$('#message').typeIt({
 			speed: 50,
 			autoStart: false
@@ -118,12 +122,15 @@
 			document.getElementById('social').style.display = "block";
 		}, 66000);
 	</script>
-
+-->
 
 	<style type="text/css">
 	    body {
-	    	color: #1E3746;
+			padding:0px;
+			margin: 0px;
+	    	color: #F6F6F6;
 	    	background-color: #FFE164;
+			background: url("https://res.cloudinary.com/xdisrupt/image/upload/c_scale,h_1080,q_auto:good,w_1920/v1495276613/creativemauritius.com/joao-silas-65013.jpg");
 	    }
 
       .home {
@@ -132,9 +139,42 @@
         text-align: center;
       }
 
+	  .container-links {
+		  text-align: center;
+		  margin: 0px auto;
+	  }
+
+	  button.btn-login {
+		  padding: 10px;
+		  text-align: center;
+		  border: 2px solid #00D054;
+		  border-radius: 50px;
+		  font-size: 20px;
+		  background: none;
+		  color: #F6F6F6;
+		  min-width: 210px;
+		  -webkit-transition: all 500ms ease-in-out;
+		  -moz-transition: all 500ms ease-in-out;
+		  -ms-transition: all 500ms ease-in-out;
+		  -o-transition: all 500ms ease-in-out;
+		  transition: all 500ms ease-in-out;
+	  }
+
+	  button.btn-login:hover {
+		  background-color: #00D054;
+		  -webkit-transition: all 500ms ease-in-out;
+		  -moz-transition: all 500ms ease-in-out;
+		  -ms-transition: all 500ms ease-in-out;
+		  -o-transition: all 500ms ease-in-out;
+		  transition: all 500ms ease-in-out;
+		  -webkit-box-shadow: -1px 9px 33px -6px rgba(0,0,0,0.75);
+		  -moz-box-shadow: -1px 9px 33px -6px rgba(0,0,0,0.75);
+		  box-shadow: -1px 9px 33px -6px rgba(0,0,0,0.75);
+	  }
+
       .headline {
         font-size: 8.5vh;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Satisfy', cursive;
       }
 
       span.dot {
@@ -142,9 +182,9 @@
       }
 
       .tagline {
-        top: -40px;
         position: relative;
-        font-family: 'Montserrat', sans-serif;
+		font-weight: 900;
+        font-family: 'Roboto', sans-serif;
       }
 
 		.container {
@@ -278,6 +318,22 @@
 			padding: 6px;
 			margin: 0px auto;
 		}
+}
+
+footer.links {
+	height: 80px;
+	padding: 10px;
+	position: absolute;
+	bottom: 0;
+	font-family: 'Roboto', sans-serif;
+	line-height: 3;
+}
+
+span.fb-logo {
+    font-size: 10px;
+    display: block;
+    padding: 0 0 0 20px;
+    margin-bottom: -20px;
 }
 	</style>
 </body>

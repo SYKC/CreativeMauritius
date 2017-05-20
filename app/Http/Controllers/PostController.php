@@ -41,7 +41,6 @@ class PostController extends Controller
       $this->middleware('auth');
       $this->validate($request, [
         'post-title' => 'required',
-        'post-body' => 'required',
         'featured_image' => 'image',
       ]);
       $post = new Post;

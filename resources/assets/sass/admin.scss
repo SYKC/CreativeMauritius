@@ -1,5 +1,5 @@
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,500,900);
 // Variables
 @import "variables";
 // Bootstrap
@@ -9,6 +9,59 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: $white-smoke;
     color: $malachite;
+}
+
+.navbar-fixed-bottom {
+    -webkit-box-shadow: -1px -1px 20px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -1px 20px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px -1px 20px -10px rgba(0, 0, 0, 0.75);
+}
+
+strong.permission {
+    color: $big-stone;
+    display: block;
+    font-size: 12px;
+    margin-top: -20px;
+    position: absolute;
+}
+
+
+/* - - - - UI Kit - - - - */
+
+.uk-notify-message-success {
+    text-align: center;
+    color: $white-smoke;
+    background-color: $brand-success;
+    -webkit-box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    height: 50px;
+    padding: 14px;
+}
+
+.uk-notify-message-warning {
+    text-align: center;
+    color: $white-smoke;
+    background-color: $brand-warning;
+    -webkit-box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    height: 50px;
+    padding: 14px;
+}
+
+.uk-notify-message-danger {
+    text-align: center;
+    color: $white-smoke;
+    background-color: $brand-danger;
+    -webkit-box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 11px 26px -13px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    height: 50px;
+    padding: 14px;
 }
 
 #app {
@@ -110,6 +163,10 @@ img.navbar-avatar {
     font-style: normal;
 }
 
+.icon-set:hover {
+    color: $big-stone;
+}
+
 .navbar-default {
     #home-menu {
         margin-right: 40px;
@@ -123,12 +180,29 @@ img.navbar-avatar {
     }
 }
 
+.center {
+    text-align: center;
+}
+
 .media-library-wrap {
     width: 100%;
     margin: 10px;
     max-width: 300px;
     border-radius: 4px;
-    border: 2px solid $transparent-white;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.media-library-wrap:hover {
+    border: 4px solid $azure-radiance;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 @media all and (max-width: 2000px) {
@@ -152,7 +226,7 @@ img.navbar-avatar {
 }
 
 .blog-post-wrapper {
-    top: 60px;
+    top: 20px;
     position: relative;
 }
 
@@ -233,7 +307,6 @@ img.navbar-avatar {
     -webkit-animation: slideInAlert 500ms;
     background-color: $brand-success;
     color: #fff;
-    position: fixed;
     top: 0;
     left: 0;
     padding: 10px;
@@ -249,7 +322,6 @@ img.navbar-avatar {
     -webkit-animation: slideInAlert 500ms;
     background-color: $brand-danger;
     color: #fff;
-    position: fixed;
     top: -25px;
     left: 0;
     padding: 10px;
@@ -320,11 +392,21 @@ img.navbar-avatar {
 
 /* Dashboard main section */
 
+#graph-container {
+    margin-bottom: 50px;
+}
+
 .dashboard-main {
     margin-bottom: 150px;
 }
 
+img.dashboard-post-cover {
+    width: 100%;
+    max-height: 180px;
+}
+
 .latest-posts-body {
+    padding: 0px;
     margin-bottom: 20px;
 }
 
@@ -338,8 +420,51 @@ figure:hover>.latest-posts-excerpt {
     padding: 8px;
 }
 
+.insights-tab {
+    height: auto;
+    margin-bottom: 50px;
+    background-color: $complete-white;
+    box-shadow: 0px 2px 10px -8px rgba(0, 0, 0, 0.75);
+}
+
+.insights-tab-header {
+    padding: 8px;
+    border-bottom: 1px solid;
+}
+
+.insights-tab-body {
+    color: $big-stone;
+    padding: 8px;
+}
+
+.social-media-widget-container {
+    height: 100px;
+    border-bottom: 1px solid;
+}
+
+.social-media-widget {
+    color: $big-stone;
+}
+
+span.social-media-widget-icon {
+    font-size: 20px;
+}
+
 
 /* - - - - Firepad Styling - - - - */
+
+
+/* --Realtime Monitoring System-- */
+
+.system-status {
+    color: $big-stone;
+    position: relative;
+    top: 8px;
+}
+
+#system-status-link {
+    display: block;
+}
 
 #firepad {
     height: 500px;
@@ -347,6 +472,69 @@ figure:hover>.latest-posts-excerpt {
 
 .powered-by-firepad {
     display: none;
+}
+
+
+/* --Toolbar-- */
+
+.firepad-toolbar {
+    height: 82px;
+    line-height: 82px;
+    padding-left: 10px;
+    border-bottom: 1px solid $azure-radiance;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.firepad-btn-group>.firepad-btn:last-child {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-topright: 4px;
+}
+
+.firepad-btn-group>.firepad-btn:first-child {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-topleft: 4px;
+    margin-left: 0px;
+}
+
+a.firepad-btn,
+a.firepad-btn:visited {
+    font-family: "Arial" sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 6px 4px 6px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    background-color: #fcfcfc;
+    border: 1px solid #c9c9c9;
+    border-bottom-width: 2px;
+    color: #9c9c9c;
+}
+
+a.firepad-btn:hover,
+a.firepad-btn:active {
+    background-color: $azure-radiance !important;
+    border: 1px solid $azure-radiance !important;
+}
+
+.firepad-richtext .CodeMirror {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 2px 10px -8px rgba(0, 0, 0, 0.75);
 }
 
 

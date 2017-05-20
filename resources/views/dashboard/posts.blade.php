@@ -9,6 +9,9 @@
     @if(Session::has('error-message'))
       <div class="error-message"><span class="ion-ios-close-outline"></span> {{ session('error-message') }}</div>
     @endif
+
+    <span class="system-status">System status: <a id="system-status-link">Checking...</a></span>
+
     <form class="uk-form uk-form-stacked blog-post-wrapper" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
       <div class="form-wrap">
         <fieldset>
@@ -98,6 +101,37 @@
         var articleBox = document.querySelector("textarea");
         articleBox.setAttribute("id", "post-body");
         articleBox.setAttribute("name", "post-body"); 
-    }, 5000);
+    }, 2000);
+</script>
+
+<script>
+setTimeout(function()
+{
+  UIkit.notify('<span class="uk-icon-spin ion-load-a"></span> Connecting...', 'warning');
+}, 1000)
+
+setTimeout(function()
+{
+  if (document.getElementById("system-status-link").innerHTML === "Checking...") {
+     UIkit.notify('An error occurred, please reload this page.', 'warning');
+  }
+}, 5000)
+
+setTimeout(function()
+{
+  var state = document.getElementById("system-status-link");
+  var connectedRef = firebase.database().ref(".info/connected");
+  connectedRef.on("value", function(snap) {
+  if (snap.val() === true) {
+    state.style.color = '#2ab27b';
+    state.textContent = "Connected"; 
+    UIkit.notify('<span class="ion-checkmark-circled"></span> Connected', 'success');
+  } else {
+    state.style.color = '#bf5329';
+    state.textContent = "Disconnected"; 
+    UIkit.notify('<span class="uk-icon-spin ion-load-a"></span> Disconnected: Attempting to reconnect', 'danger');
+  }
+});
+}, 3000);
 </script>
 @endsection
