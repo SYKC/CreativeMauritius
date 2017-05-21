@@ -71,6 +71,9 @@
     <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
     <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
 
+    <!-- CKEditor -->
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+
     <!-- Core CSS files -->
     <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet" type="text/css">
 

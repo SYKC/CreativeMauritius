@@ -37,6 +37,9 @@
           </div>
         </div>
       </div>
+      <!-- $.getJSON('https://newsapi.org/v1/articles?source=techcrunch&apiKey=77303da420f54be38222c0493e7a21ad',function(data) {
+       console.log(data.articles);
+      }); -->
       </div><!--End of row-->
 
       <div class="row">

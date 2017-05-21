@@ -7973,6 +7973,15 @@ img.navbar-avatar {
   background-color: #1fa9ff !important;
 }
 
+@media only screen and (max-width: 1200px) {
+  #post-editor-sidebar {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 200px;
+  }
+}
+
 .success-message {
   width: 100%;
   text-align: center;
@@ -8063,7 +8072,7 @@ img.navbar-avatar {
 
 img.dashboard-post-cover {
   width: 100%;
-  max-height: 180px;
+  max-height: 220px;
 }
 
 .latest-posts-body {
@@ -8084,6 +8093,7 @@ figure:hover > .latest-posts-excerpt {
 .insights-tab {
   height: auto;
   margin-bottom: 50px;
+  border-radius: 4px;
   background-color: #FFF;
   box-shadow: 0px 2px 10px -8px rgba(0, 0, 0, 0.75);
 }
@@ -8111,12 +8121,48 @@ span.social-media-widget-icon {
   font-size: 20px;
 }
 
+.btn-editing-choice {
+  float: right;
+  top: 16px;
+}
+
+#editor-choice {
+  color: #142433;
+}
+
+#editor-choice:active,
+#editor-choice:visited {
+  color: #FFF;
+  background-color: #009CFC;
+}
+
+#editor-choice:hover {
+  border-color: #009CFC;
+  color: #FFF;
+  background-color: #009CFC;
+}
+
+.dropdown-menu {
+  min-width: 195px;
+}
+
+.dropdown-menu > li {
+  padding: 0 0 0 10px;
+}
+
+.dropdown-menu > li:hover {
+  cursor: pointer;
+  color: #FFF;
+  background-color: #009CFC;
+}
+
 /* - - - - Firepad Styling - - - - */
 /* --Realtime Monitoring System-- */
 .system-status {
   color: #142433;
   position: relative;
   top: 8px;
+  display: inline-block;
 }
 
 #system-status-link {

@@ -12,7 +12,18 @@
 
     <span class="system-status">System status: <a id="system-status-link">Checking...</a></span>
 
-    <form class="uk-form uk-form-stacked blog-post-wrapper" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
+    <div class="btn-group btn-editing-choice">
+     <button value"realtime" id="editor-choice" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Realtime Editing <span class="caret"></span>
+     </button>
+     <ul class="dropdown-menu">
+       <li id="realtime-editing" onclick="RealtimeEditorChoice()">Realtime Editing</li>
+       <li id="standalone-editing" onclick="StandaloneEditorChoice()">Standalone Editing</li>
+       <li id="collab-publishing" onclick="StandaloneEditorChoice()">Collaborative Publishing</li>
+     </ul>
+    </div>
+
+    <form class="uk-form uk-form-stacked blog-post-wrapper" id="editing-tools" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
       <div class="form-wrap">
         <fieldset>
           <div class="uk-form-row" class="post-title">
@@ -20,9 +31,9 @@
             <input type="text" class="uk-form-controls" id="post-title-input" name="post-title" placeholder="Enter a title">
           </div>
 
+          <label class="uk-form-label" for="firepad">Write your story</label>
           <div id="userlist"></div>
           <div class="uk-form-row" id="firepad" name="post-body">
-            <label class="uk-form-label" for="firepad">Write your story</label>
               <script>
     function init() {
       //// Initialize Firebase.
@@ -70,6 +81,7 @@
   </script>
   
           </div>
+          <div class="uk-form-row" name="post-body-standalone"></div> <!-- Standalone editor -->
       </div>
 
   <div id="post-editor-sidebar">
@@ -107,6 +119,7 @@
 <script>
 setTimeout(function()
 {
+  document.getElementById("editing-tools").style["-webkit-filter"] = "blur(2px)";
   UIkit.notify('<span class="uk-icon-spin ion-load-a"></span> Connecting...', 'warning');
 }, 1000)
 
@@ -119,19 +132,46 @@ setTimeout(function()
 
 setTimeout(function()
 {
+  var blurElement = document.getElementById("editing-tools");
   var state = document.getElementById("system-status-link");
   var connectedRef = firebase.database().ref(".info/connected");
   connectedRef.on("value", function(snap) {
   if (snap.val() === true) {
+    blurElement.style["-webkit-filter"] = "blur(0px)";
     state.style.color = '#2ab27b';
     state.textContent = "Connected"; 
     UIkit.notify('<span class="ion-checkmark-circled"></span> Connected', 'success');
   } else {
+    blurElement.style["-webkit-filter"] = "blur(2px)";
     state.style.color = '#bf5329';
     state.textContent = "Disconnected"; 
     UIkit.notify('<span class="uk-icon-spin ion-load-a"></span> Disconnected: Attempting to reconnect', 'danger');
   }
 });
 }, 3000);
+</script>
+
+<script>
+var standaloneEditor = document.getElementById("cke_editor1");
+var editingChoice = document.getElementById("editor-choice");
+$("cke_editable").attr("id", "default-publishing-editor");
+function RealtimeEditorChoice()
+{
+  editingChoice.innerHTML = "Realtime Editing <span class='caret'></span>";
+  editingChoice.setAttribute("value", "realtime");
+  standaloneEditor.style.display = "none";
+}
+
+function StandaloneEditorChoice()
+{
+  editingChoice.innerHTML = "Standalone Editing <span class='caret'></span>";
+  editingChoice.setAttribute("value", "standalone");
+  CKEDITOR.replace( 'post-body-standalone' );
+  standaloneEditor.style.display = "block";
+  var iframe = document.querySelector("iframe");
+  var innerDocument = iframe.contentDocument || iframe.contentWindow.document;
+  innerDocument.getElementsByClassName("cke_contents").setAttribute("id", "default-publishing-editor");
+}
+
 </script>
 @endsection
