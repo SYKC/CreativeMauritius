@@ -23,7 +23,7 @@
     <span class="attribute"> ADVENTURE | STORY </span>
     <h1>The Cinematography of “Anna Karenina”</h1>
       <hr>
-      <div class="moment-info">
+      <div class="article-excerpt">
         <p>
           Director of photography Seamus McGarvey’s collaborative history with Joe Wright goes back years, and he had worked with most of the Anna Karenina filmmaking team on Atonement.
         </p>

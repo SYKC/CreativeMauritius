@@ -14,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Jaldi" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,900" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" type="text/css">
@@ -62,7 +61,7 @@
         var pos = navigation.position();
         $(window).scroll(function() {
           var windowpos = $(window).scrollTop();
-          if (windowpos >= 700) {
+          if (windowpos >= 100) {
             navigation.addClass("navbar-scroll");
             logo.addClass("scroll-show")
           } else {

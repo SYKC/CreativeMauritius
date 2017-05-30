@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 /*
 //Gradients
 background: #009cfc; // Old browsers
@@ -7701,13 +7700,13 @@ html {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   margin: -22px 0 0 0;
   background-color: #F5F5F5;
 }
 
 body h1.site-title {
-  font-weight: 800;
-  font-family: "Raleway", sans-serif;
+  font-weight: 300;
   text-align: center;
   text-transform: uppercase;
 }
@@ -7738,15 +7737,9 @@ body .homepage-impression {
   background-position: center !important;
   background-size: cover !important;
   background: #6262fb;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #6262fb 0%, #ef0d33 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #6262fb 0%, #ef0d33 100%);
   background: linear-gradient(135deg, #6262fb 0%, #ef0d33 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6262fb', endColorstr='#ef0d33',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 .showcase-container {
@@ -7766,7 +7759,11 @@ li {
   display: inline-block;
 }
 
-a, a:visited, a:hover, a:active, a:focus {
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
   color: inherit;
   text-decoration: none;
 }
@@ -7809,16 +7806,19 @@ a, a:visited, a:hover, a:active, a:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: inset 0px 80px 64px -18px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
-.featured-container .moment-info {
-  color: #A6A6A6;
+.featured-container .article-excerpt {
+  color: #F5F5F5;
   float: left;
   padding: 20px;
   position: absolute;
 }
 
-.featured-container .moment-info span.attribute {
+.featured-container .article-excerpt span.attribute {
   display: block;
 }
 
@@ -7826,7 +7826,8 @@ a, a:visited, a:hover, a:active, a:focus {
   color: #F5F5F5;
   padding: 20px;
   font-size: 48px;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 .featured-container hr {
@@ -7840,8 +7841,9 @@ a, a:visited, a:hover, a:active, a:focus {
 }
 
 .featured-container p {
+  max-width: 950px;
   position: relative;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
   bottom: 40px;
 }
 
@@ -7853,7 +7855,7 @@ a, a:visited, a:hover, a:active, a:focus {
   top: 22px;
   padding: 22px;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 500;
   position: relative;
   color: #FFF;
 }
@@ -7861,10 +7863,10 @@ a, a:visited, a:hover, a:active, a:focus {
 .featured-container button#learn-more {
   bottom: -45px;
   padding: 6px;
-  width: 100px;
+  width: 130px;
   float: left;
   border: none;
-  font-weight: 800;
+  font-weight: 400;
   background: none;
   position: relative;
   border-radius: 50px;
@@ -7883,6 +7885,12 @@ a, a:visited, a:hover, a:active, a:focus {
 
 .featured-container button#learn-more:hover > .ion-chevron-right {
   display: inline-block;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.featured-container:hover {
+  box-shadow: inset 0px 50px 64px -18px rgba(0, 0, 0, 0.75);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
@@ -7961,15 +7969,9 @@ h5#add-tags {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background: #5c47cd;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #5c47cd 0%, #ee3d43 100%, #9fd8ef 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #5c47cd 0%, #ee3d43 100%, #9fd8ef 100%);
   background: linear-gradient(135deg, #5c47cd 0%, #ee3d43 100%, #9fd8ef 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c47cd', endColorstr='#9fd8ef',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 #culture {
@@ -7980,15 +7982,9 @@ h5#add-tags {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background: #0cad9a;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #0cad9a 0%, #f0ff00 100%, #2e3837 100%, #f0ff00 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #0cad9a 0%, #f0ff00 100%, #2e3837 100%, #f0ff00 100%);
   background: linear-gradient(135deg, #0cad9a 0%, #f0ff00 100%, #2e3837 100%, #f0ff00 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0cad9a', endColorstr='#f0ff00',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 #history {
@@ -7999,15 +7995,9 @@ h5#add-tags {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background: #009cfc;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #009cfc 0%, #009cfc 0%, #00d054 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #009cfc 0%, #009cfc 0%, #00d054 100%);
   background: linear-gradient(135deg, #009cfc 0%, #009cfc 0%, #00d054 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#00d054',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 #art:hover {
@@ -8148,11 +8138,6 @@ h5#add-tags {
   background-color: #fff;
 }
 
-p#welcome-message, p#rank {
-  font-family: 'Fredoka One', cursive;
-  font-size: 30px;
-}
-
 img.navbar-avatar {
   width: 47px;
   height: 45px;
@@ -8207,15 +8192,9 @@ input#avatar {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background: #000cff !important;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #000cff 0%, #009cfc 100%) !important;
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #000cff 0%, #009cfc 100%) !important;
   background: linear-gradient(135deg, #000cff 0%, #009cfc 100%) !important;
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000cff', endColorstr='#009cfc',GradientType=1 ) !important;
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 .navbar-default {
@@ -8234,13 +8213,15 @@ input#avatar {
   font-size: 20px;
 }
 
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
   color: #F5F5F5;
   border: none;
   background-color: #009CFC;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
   border: none;
   border-color: #009CFC;
   box-shadow: none;
@@ -8262,15 +8243,9 @@ input#avatar {
   position: fixed;
   display: none;
   background: #009CFC;
-  /* Old browsers */
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #009CFC 0%, #4fbcf7 60%, #7dd1ed 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #009CFC 0%, #4fbcf7 60%, #7dd1ed 100%);
   background: linear-gradient(135deg, #009CFC 0%, #4fbcf7 60%, #7dd1ed 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$azure-radiance', endColorstr='#7dd1ed',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
 }
 
 #mega-navigation #large-menu {
@@ -8285,7 +8260,8 @@ input#avatar {
   margin: 12px -30px 0 0px;
 }
 
-#menu-trigger, #menu-mobile {
+#menu-trigger,
+#menu-mobile {
   cursor: pointer;
   padding: 6px;
   background-color: #009CFC;
@@ -8296,8 +8272,27 @@ input#avatar {
   box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
 }
 
-#menu-trigger ul.navbar-avatar-container, #menu-mobile ul.navbar-avatar-container {
+#menu-trigger ul.navbar-avatar-container,
+#menu-mobile ul.navbar-avatar-container {
   display: none;
+}
+
+@media all and (max-width: 1200px) {
+  #menu-trigger,
+  #menu-mobile {
+    height: 45px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    background-color: #009CFC;
+    color: #F5F5F5;
+    border-radius: 2px;
+    top: 10px;
+    box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
+    width: 70px !important;
+    text-align: center;
+    position: relative;
+  }
 }
 
 .preview {
@@ -8361,9 +8356,14 @@ input#avatar {
   width: 100%;
 }
 
+.main-content-wrapper {
+  padding: 30px;
+}
+
 #article-body {
   line-height: 1.8;
   font-size: 18px;
+  font-weight: 300;
 }
 
 .headstart {
@@ -8385,7 +8385,45 @@ input#avatar {
 
 h1.article-title {
   color: #142433;
-  font-family: 'Yeseva One', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.article-metadata-container {
+  margin: 0px auto;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+.article-metadata-container span {
+  font-size: 12px;
+  color: #142433;
+}
+
+.article-metadata-container img.author-avatar {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-right: 15px;
+  border-radius: 50px;
+  border: 2px solid #CCCCCC;
+}
+
+.article-metadata-container p.author-name {
+  color: #142433;
+  font-weight: 900;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.article-metadata-container .icon {
+  color: #96AEE7 !important;
+}
+
+.article-metadata-container i {
+  font-style: normal;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -8411,18 +8449,20 @@ h1.article-title {
 @media only screen and (max-width: 390px) {
   #title {
     text-align: left;
-    margin: 0  0 8%;
+    margin: 0 0 8%;
   }
   #title h1.article-title {
     font-size: 26px;
   }
 }
 
-[data-description*="security"] {
-  color: #00ff00 !important;
+[data-description*="security"] h1 {
+  color: #123344;
   text-decoration: underline !important;
   -webkit-text-decoration-style: double !important;
   text-decoration-style: double !important;
+  -webkit-text-decoration-color: #00ff00 !important;
+  text-decoration-color: #00ff00 !important;
 }
 
 [data-description*="politics"] {
@@ -8482,7 +8522,8 @@ h1.article-title {
   #small-menu-visible ul li a {
     color: #FFF;
   }
-  #menu-trigger, #menu-mobile {
+  #menu-trigger,
+  #menu-mobile {
     cursor: pointer;
     padding: 6px;
     background-color: #009CFC;
@@ -8510,7 +8551,10 @@ h1.article-title {
   #menu-trigger {
     display: none !important;
   }
-  .navbar-default, .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus {
+  .navbar-default,
+  .navbar-toggle,
+  .navbar-toggle:hover,
+  .navbar-toggle:focus {
     margin: 0px;
     border: none;
     width: 100%;
@@ -8538,7 +8582,8 @@ h1.article-title {
 /* ----------- iPhone 4 and 4S ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8550,7 +8595,8 @@ h1.article-title {
   h1 {
     font-size: 18px;
   }
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8576,7 +8622,8 @@ h1.article-title {
 
 /* Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8586,7 +8633,8 @@ h1.article-title {
 /* ----------- iPhone 5 and 5S ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8595,7 +8643,8 @@ h1.article-title {
 
 /* Portrait */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8604,7 +8653,8 @@ h1.article-title {
 
 /* Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8614,7 +8664,8 @@ h1.article-title {
 /* ----------- iPhone 6 ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8623,7 +8674,8 @@ h1.article-title {
 
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8632,7 +8684,8 @@ h1.article-title {
 
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8642,7 +8695,8 @@ h1.article-title {
 /* ----------- iPhone 6+ ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8651,7 +8705,8 @@ h1.article-title {
 
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;
@@ -8660,7 +8715,8 @@ h1.article-title {
 
 /* Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
     top: 0px;
     position: relative;
     background-color: #142433 !important;

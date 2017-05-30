@@ -19,14 +19,21 @@
         <img src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}" class="img-cover" alt="{{ $post->title }}">
       @endif
 
-      <div class="row">
-        <div class="col-md-3">.col-md-4</div>
+      <div class="row main-content-wrapper">
+        <aside class="article-metadata-container col-md-3">
+         <span>Written by</span>
+         <img class="author-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ $post->user->avatar }}">
+         <p class="author-name">{{ $post->user->username }}</p>
+         <span class="icon">
+          <i class="ion-calendar"> 27 MAY 2017</i>
+        </span>
+        </aside><!-- End of right sidebar -->
         <div class="col-md-6">
           <section id="article-body">
             <p>{{ $post->body }}</p>
           </section>
         </div>
-        <div class="col-md-3">.col-md-4</div>
+        <aside class="col-md-3">.col-md-4</aside><!-- End of left sidebar -->
       </div>
     </article>
   </div>
