@@ -8415,7 +8415,7 @@ h1.article-title {
   color: #142433;
   font-weight: 900;
   font-size: 16px;
-  margin: 0px;
+  margin: -5px 0 0 0;
 }
 
 .article-metadata-container .icon {

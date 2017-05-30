@@ -23,7 +23,7 @@
         <aside class="article-metadata-container col-md-3">
          <span>Written by</span>
          <img class="author-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ $post->user->avatar }}">
-         <p class="author-name">{{ $post->user->username }}</p>
+         <p class="author-name">{{ $post->user->name }}</p>
          <span class="icon">
           <i class="ion-calendar"> 27 MAY 2017</i>
         </span>
