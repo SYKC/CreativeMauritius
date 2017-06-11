@@ -32,12 +32,4 @@
     @endif
   </div>
 </div>
-
-<div class="progress-container">
-  <p id="rank">
-    Visualize your progress in recent quizes
-  </p>
-
-  <canvas id="my-progress" width="600" height="400"></canvas>
-</div>
 @endsection

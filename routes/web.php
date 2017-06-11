@@ -56,7 +56,7 @@ Route::post('/dashboard/posts/create/new', [
 ]);
 
 // ------------->Read a blog article<-------------//
-Route::get('/blog/posts/{id}', [
+Route::get('/article/{id}', [
   'uses' => 'PostController@readPost',
   'as' => 'post.read',
 ]);

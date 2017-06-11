@@ -100,6 +100,18 @@
       <div class="uk-form-row" id="post-tags">
         <label class="uk-form-label" for="post-tags">Associate some tags</label>
         <input type="text" class="uk-form-controls" id="post-tags-input" name="post-tags" placeholder="Separate your tags with a comma">
+        <div class="<uk-form-select>" data-uk-form-select>
+        <span>Suggested tags: </span>
+        <select>
+        </hr>
+          <option value="0">Select from list</option>
+          <option value="1">Culture</option>
+          <option value="2">Design</option>
+          <option value="3">Security</option>
+          <option value="4">Politics</option>
+          <option value="5">Photography</option>
+        </select>
+       </div>
       </div>
       </fieldset>
       <button type="submit" class="uk-button btn-publish">Publish</button>

@@ -3,6 +3,7 @@
 namespace creativemauritius\Http\Controllers;
 
 use Illuminate\Http\Request;
+use creativemauritius\Models\Post;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $posts = Post::all();
+        return view('home', ['posts' => $posts]);
     }
 }
