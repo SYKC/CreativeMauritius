@@ -87,7 +87,7 @@
   <div id="post-editor-sidebar">
     <div class="featured-image-widget">
         <div id="image-preview">
-            <img src="{{ URL::to('/') }}/uploads/covers/default_cover.jpg" name="featured_image" class="image-box">
+            <img src="{{ URL::to('/') }}/uploads/covers/default_cover.png" name="featured_image" class="image-box">
         </div>
 
         <div id="widget-message">

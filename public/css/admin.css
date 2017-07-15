@@ -7715,6 +7715,93 @@ strong.permission {
   position: absolute;
 }
 
+span.ion-connection-bars {
+  font-size: 35px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.returning-user-container {
+  text-align: center;
+  color: #000;
+}
+
+.returning-user-container h1#user-firstname {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.returning-user-container .quick-insights-navigations {
+  margin-bottom: 20px;
+}
+
+.returning-user-container ul.horizontal-navigation {
+  margin: 40px 0 40px 0;
+  font-size: 22px;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.returning-user-container ul.horizontal-navigation li.nav-items--publications,
+.returning-user-container ul.horizontal-navigation li.nav-items--followers,
+.returning-user-container ul.horizontal-navigation li.nav-items--collaborations {
+  display: inline-block;
+  margin: 0 70px 0 70px;
+}
+
+.top-banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  text-align: right;
+  background: #00fcc0;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(315deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
+  background: linear-gradient(135deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
+}
+
+.top-banner h1 {
+  font-weight: 900;
+  color: #FFF;
+  padding: 20px 20px 0 0;
+}
+
+.top-banner p {
+  color: #FFF;
+  margin: 0 20px 0 0;
+  max-width: 300px;
+  text-align: right;
+  float: right;
+  font-size: 22px;
+}
+
+.top-banner button.get-started {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 110px;
+  margin: 20px;
+  border: none;
+  position: absolute;
+  border-radius: 4px;
+  padding: 10px;
+  color: #FFF;
+  top: 160px;
+  float: right;
+  right: 0px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.top-banner button.get-started:hover {
+  box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 /* - - - - UI Kit - - - - */
 .uk-notify-message-success {
   text-align: center;
@@ -7817,8 +7904,23 @@ a:hover {
   margin-bottom: -40px;
 }
 
-p.total-users {
+div.notifications {
   float: right;
+  font-size: 18px;
+  padding: 6px;
+  border: 1px solid #000;
+  margin: -10px 0 0 0;
+  border-radius: 2px;
+  color: #000;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+div.notifications:hover {
+  color: #FFF;
+  background-color: #000;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 span.status-online {

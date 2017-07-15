@@ -17,8 +17,8 @@
           <td>{{ $post->id }}</td>
           <td>
             <p>{{ $post->title }}</p>
-            <a href="/blog/posts/{{$post->id}}" class="edit-editable-post">Edit</a>
-            <a href="/blog/posts/{{$post->id}}" class="view-editable-post">View Article</a>
+            <a href="/article/{{$post->id}}" class="edit-editable-post">Edit</a>
+            <a href="/article/{{$post->id}}" class="view-editable-post">View Article</a>
           </td>
           <td>{{ $post->tags }}</td>
           <td>{{ $post->user->username }}</td>

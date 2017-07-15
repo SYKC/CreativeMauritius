@@ -8,7 +8,7 @@
         </header>
       </section>
 
-      @if ($post->featured_image != "default_cover.jpg")
+      @if ($post->featured_image != "default_cover.png")
         <div class="post-cover-bg">
           <figure>
             <img src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}" class="img-cover" alt="{{ $post->title }}">

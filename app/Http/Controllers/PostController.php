@@ -60,7 +60,7 @@ class PostController extends Controller
         Image::make($post->featured_image->getRealPath())->resize(150, 80)->save($thumbPath);
         $post->featured_image = $filename;
       } else {
-        $post->featured_image = "default_cover.jpg";
+        $post->featured_image = "default_cover.png";
       }
 
       if ($request->user()->posts()->save($post))

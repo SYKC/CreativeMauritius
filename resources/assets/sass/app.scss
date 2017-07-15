@@ -530,7 +530,7 @@ h5#add-tags {
 
 .breadcrumbs-navigation {
     padding: 16px;
-    margin-top: -22px;
+    margin-top: 100px;
     background-color: $azure-radiance;
     span {
         color: $white-smoke;
@@ -631,10 +631,7 @@ input#avatar {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background: #000cff !important;
-    background: -moz-linear-gradient(-45deg, #000cff 0%, #009cfc 100%) !important;
-    background: -webkit-linear-gradient(-45deg, #000cff 0%, #009cfc 100%) !important;
-    background: linear-gradient(135deg, #000cff 0%, #009cfc 100%) !important;
+    background: #333 !important;
 }
 
 //Most beautiful one
@@ -696,10 +693,7 @@ input#avatar {
     z-index: -1;
     position: fixed;
     display: none;
-    background: $azure-radiance;
-    background: -moz-linear-gradient(-45deg, $azure-radiance 0%, #4fbcf7 60%, #7dd1ed 100%);
-    background: -webkit-linear-gradient(-45deg, $azure-radiance 0%, #4fbcf7 60%, #7dd1ed 100%);
-    background: linear-gradient(135deg, $azure-radiance 0%, #4fbcf7 60%, #7dd1ed 100%);
+    background: #333;
     #large-menu {
         width: inherit;
         top: 45px;
