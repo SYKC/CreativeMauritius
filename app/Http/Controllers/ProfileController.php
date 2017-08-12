@@ -76,17 +76,19 @@ class ProfileController extends Controller
       }
 
       $this->validate($request, [
-        'name' => ['regex:/^[(a-zA-Z\s)]+$/u'],
+        'first_name' => ['regex:/^[(a-zA-Z\s)]+$/u'],
+        'last_name' => ['regex:/^[(a-zA-Z\s)]+$/u'],
         'location' => ['regex:/^[(a-zA-Z\s)]+$/u'],
-        'email' => 'email|max:255|unique:users',
+        //'email' => 'email|max:255|unique:users',
         'biography' => 'max:250',
         'avatar' => 'image',
       ]);
 
       Auth::user()->update([
-        'name' => $request->input('name'),
+        'first_name' => $request->input('first_name'),
+        'last_name' => $request->input('last_name'),
         'location' => $request->input('location'),
-        'email' => $request->input('email'),
+        //'email' => $request->input('email'),
         'biography' => $request->input('biography'),
       ]);
 

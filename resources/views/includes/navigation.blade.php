@@ -41,7 +41,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                           <img class="navbar-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
-                            <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->name }}</span>
+                            <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
@@ -74,7 +74,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                           <img class="navbar-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
-                            <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->name }}</span>
+                            <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">

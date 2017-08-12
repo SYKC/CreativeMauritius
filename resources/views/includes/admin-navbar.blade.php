@@ -24,7 +24,7 @@
             <ul class="navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                          {{ Auth::user()->name }}
+                          {{ Auth::user()->username }}
                           <strong class="permission">Level 5 Administrator</strong>
                           <img class="navbar-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
                           <span class="caret"></span>

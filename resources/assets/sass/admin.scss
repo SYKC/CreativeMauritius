@@ -69,6 +69,9 @@ span.ion-connection-bars {
     background: -webkit-linear-gradient(-45deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
+    -webkit-box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.4);
     h1 {
         font-weight: 900;
         color: $complete-white;
@@ -152,6 +155,7 @@ span.ion-connection-bars {
 }
 
 #app {
+    margin-bottom: 150px;
     animation: fadein 500ms;
     -moz-animation: fadein 500ms;
     -webkit-animation: fadein 500ms;

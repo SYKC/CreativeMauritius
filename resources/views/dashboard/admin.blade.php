@@ -13,7 +13,7 @@
 
     <section class="dashboard-main">
     <div class="returning-user-container">
-      <h1 id="user-firstname">Hello {{ Auth::user()->name }}.</h1>
+      <h1 id="user-firstname">Hello {{ Auth::user()->first_name }}.</h1>
       <div class="quick-insights-navigation">
       <ul class="horizontal-navigation">
           <li class="nav-items--publications" data-count="{{ Auth::user()->posts->count() }}">{{ Auth::user()->posts->count() }} Stories published</li>

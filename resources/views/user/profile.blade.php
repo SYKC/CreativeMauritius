@@ -4,7 +4,7 @@
 <div class="container" id="container-top-profile">
   @if(Auth::check() && ( Route::Input('username') === Auth::user()->username ))
     <p id="welcome-message">
-      Hello, {{ Auth::user()->name }}
+      Hello, {{ Auth::user()->first_name }}
     </p>
     <a href="{{ route('user.edit', auth::user()->username) }}"><button id="edit">Edit Profile</button></a>
   @endif

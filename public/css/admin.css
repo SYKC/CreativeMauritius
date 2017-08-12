@@ -7763,6 +7763,7 @@ span.ion-connection-bars {
   /* Chrome10-25,Safari5.1-6 */
   background: -webkit-linear-gradient(315deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
   background: linear-gradient(135deg, #00fcc0 0%, #29b8e5 50%, #007aff 100%);
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.4);
 }
 
 .top-banner h1 {
@@ -7834,6 +7835,7 @@ span.ion-connection-bars {
 }
 
 #app {
+  margin-bottom: 150px;
   animation: fadein 500ms;
   -moz-animation: fadein 500ms;
   -webkit-animation: fadein 500ms;

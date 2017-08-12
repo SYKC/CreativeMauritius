@@ -18,7 +18,7 @@ class User extends Authenticatable
     protected $table = 'users';
 
     protected $fillable = [
-        'name', 'email', 'password', 'username', 'avatar', 'biography', 'location', 'user_role',
+        'first_name', 'last_name', 'email', 'password', 'username', 'avatar', 'biography', 'location', 'user_role',
     ];
 
     /**
@@ -61,9 +61,9 @@ class User extends Authenticatable
 
     public function getName()
     {
-      if ($this->name)
+      if ($this->first_name)
       {
-        return $this->name;
+        return $this->first_name;
       }
         return "none";
     }

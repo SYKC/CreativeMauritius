@@ -13,11 +13,21 @@
 <form method="post" action="{{ route('user.edit', ['username' => Auth::user()->username]) }}" enctype="multipart/form-data">
   {{ csrf_field() }}
   <div class="form-group">
-    <label for="Name">Name</label>
-    <input type="text" name="name" class="form-control" id="name" value="{{ Request::old('name') ?: Auth::user()->name }}" placeholder="Enter your new name">
+    <label for="First Name">First Name</label>
+    <input type="text" name="first_name" class="form-control" id="first_name" value="{{ Request::old('first_name') ?: Auth::user()->first_name }}" placeholder="Enter your new first name">
     @if ($errors->has('name'))
         <span class="help-block">
-            <strong>{{ $errors->first('name') }}</strong>
+            <strong>{{ $errors->first('first_name') }}</strong>
+        </span>
+    @endif
+  </div>
+
+    <div class="form-group">
+    <label for="Last Name">Last Name</label>
+    <input type="text" name="last_name" class="form-control" id="last_name" value="{{ Request::old('last_name') ?: Auth::user()->last_name }}" placeholder="Enter your new last name">
+    @if ($errors->has('last_name'))
+        <span class="help-block">
+            <strong>{{ $errors->first('last_name') }}</strong>
         </span>
     @endif
   </div>
@@ -32,6 +42,7 @@
     @endif
   </div>
 
+  <!-- Account settings
   <div class="form-group">
     <label for="Email1">Email address</label>
     <input type="email" name="email" class="form-control" id="email1" value="{{ Request::old('email') ?: Auth::user()->email }}" placeholder="Enter your new email">
@@ -41,7 +52,8 @@
         </span>
     @endif
   </div>
-
+  -->
+  
   <div class="form-group">
     <label for="Avatar">Upload new avatar</label>
     <input type="file" name="avatar" id="avatar">
