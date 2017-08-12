@@ -84,7 +84,7 @@
           </div>
 
           <div class="form-group" class="post-read-only">
-            <label for="post-read-only">Review your story</label>
+            <label for="post-body-read-only">RAW Story Markup</label>
             <textarea readonly="readonly" id="post-body" name="post-body"></textarea>
           </div>
 

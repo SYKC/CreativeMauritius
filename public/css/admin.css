@@ -8002,6 +8002,10 @@ img.navbar-avatar {
   position: relative;
 }
 
+#post-body {
+  width: 100%;
+}
+
 #post-editor,
 #post-title,
 #post-title-input,

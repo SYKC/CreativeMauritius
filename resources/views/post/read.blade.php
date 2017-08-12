@@ -23,14 +23,14 @@
         <aside class="article-metadata-container col-md-3">
          <span>Written by</span>
          <img class="author-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ $post->user->avatar }}">
-         <p class="author-name">{{ $post->user->name }}</p>
+         <p class="author-name">{{ $post->user->first_name }} {{ $post->user->last_name }}</p>
          <span class="icon">
           <i class="ion-calendar"> 27 MAY 2017</i>
         </span>
         </aside><!-- End of right sidebar -->
         <div class="col-md-6">
           <section id="article-body">
-            <p>{!! nl2br(e($post->body)) !!}</p>
+            <p>{!! $post->body !!}</p>
           </section>
         </div>
         <aside class="col-md-3">.col-md-4</aside><!-- End of left sidebar -->

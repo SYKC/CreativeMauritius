@@ -8469,6 +8469,14 @@ input#avatar {
   font-weight: 300;
 }
 
+#article-body p {
+  white-space: pre-wrap;
+}
+
+#article-body p > img {
+  max-width: 640px;
+}
+
 .headstart {
   font-family: 'Yeseva One', cursive;
   font-size: 25px;

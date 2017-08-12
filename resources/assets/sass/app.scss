@@ -835,6 +835,12 @@ input#avatar {
     line-height: 1.8;
     font-size: 18px;
     font-weight: 300;
+    p {
+        white-space: pre-wrap;
+    }
+    p>img {
+        max-width: 640px;
+    }
 }
 
 .headstart {
