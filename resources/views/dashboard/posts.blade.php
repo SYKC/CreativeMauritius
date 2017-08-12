@@ -85,7 +85,7 @@
 
           <div class="form-group" class="post-read-only">
             <label for="post-read-only">Review your story</label>
-            <input readonly="readonly" type="text" id="post-body" name="post-body">
+            <textarea readonly="readonly" id="post-body" name="post-body"></textarea>
           </div>
 
           <div class="form-group" name="post-body-standalone"></div> <!-- Standalone editor -->

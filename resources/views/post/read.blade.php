@@ -30,7 +30,7 @@
         </aside><!-- End of right sidebar -->
         <div class="col-md-6">
           <section id="article-body">
-            <p>{{ $post->body }}</p>
+            <p>{!! nl2br(e($post->body)) !!}</p>
           </section>
         </div>
         <aside class="col-md-3">.col-md-4</aside><!-- End of left sidebar -->
