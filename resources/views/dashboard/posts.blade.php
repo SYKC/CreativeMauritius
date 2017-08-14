@@ -24,14 +24,22 @@
     </div>
 
     <form class="uk-form uk-form-stacked blog-post-wrapper" id="editing-tools" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
+      <div class="form-group post-title">
+        <label for="post-title"><h1>Title<span class="dot">.</span></h1></label>
+        <input type="text" class="form-control" id="post-title-input" name="post-title" placeholder="Enter a title for your story">
+        <span>TIP: Write an eye-catching and engaging headline.</span>
+      </div>
+
+      <div class="featured-image-widget">
+        <div id="image-preview">
+            <img src="{{ URL::to('/') }}/uploads/covers/default_cover.png" name="featured_image" class="image-box" id="upload-cover-preview">
+        </div>
+      </div>
+
       <div class="form-wrap">
         <fieldset>
-          <div class="form-group" class="post-title">
-            <label for="post-title">Title</label>
-            <input type="text" class="form-control" id="post-title-input" name="post-title" placeholder="Enter a title">
-          </div>
 
-          <label for="firepad">Write your story</label>
+          <label for="firepad" class="story-editor"><h1 class="story-label">Write your story<span class="dot">.</span></h1></label>
           <div id="userlist"></div>
           <div class="form-group" id="firepad">
           <script>
@@ -92,20 +100,25 @@
       </div>
 
   <div id="post-editor-sidebar">
-    <div class="featured-image-widget">
-        <div id="image-preview">
-            <img src="{{ URL::to('/') }}/uploads/covers/default_cover.png" name="featured_image" class="image-box">
-        </div>
-
-        <div id="widget-message">
-          Add a cover image
-          <i class="ion-arrow-right-c"></i>
-          <input type="file" name="featured_image" id="featured_image">
-        </div>
+      <div class="form-group widget-area">
+      <label for="file-upload" id="cover-upload">
+        <span class="ion-camera"> Upload a cover</span> 
+      </label>
+      <input id="file-upload" type="file"/>
+      <img src="{{ URL::to('/') }}/uploads/covers/default_cover.png" id="upload-cover-widgetPreview">
+        
+        </button>
       </div>
 
-      <div class="form-group" id="post-tags">
-        <label for="post-tags">Associate some tags</label>
+      <div class="form-group widget-area">
+      <label for="story-collaborate" class="story-collaborate-label"><h1>Collaborate<span class="dot">.</span></h1></label>
+        <button type="button" class="btn-utility" onclick="shareUtility()"><span class="ion-share"></span> Share URL</button>
+        <button type="button" class="btn-utility" onclick="emailUtility()"><span class="ion-email"></span> Email this story</button>
+        <input id="share-link" type="text" readonly>
+      </div>
+
+      <div class="form-group widget-area">
+        <label for="post-tags" class="tag-label"><h1>Add some tags<span class="dot">.</span></h1></label>
         <input type="text" class="form-control" id="post-tags-input" name="post-tags" placeholder="Separate your tags with a comma">
         <div class="<uk-form-select>" data-uk-form-select>
         <span>Suggested tags: </span>
@@ -184,5 +197,52 @@ function StandaloneEditorChoice()
   innerDocument.getElementsByClassName("cke_contents").setAttribute("id", "default-publishing-editor");
 }
 
+</script>
+
+<script>
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#upload-cover-preview, #upload-cover-widgetPreview').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#file-upload").change(function(){
+    readURL(this);
+});
+
+
+function shareUtility() {
+  var displayBtn = document.getElementById("share-link");
+  displayBtn.value = window.location.href;
+  displayBtn.style.display = "block";
+}
+
+function emailUtility() {
+  var storyUrl = window.location.href;
+  var emailInput = "veegish240@gmail.com";
+  var getStoryTitle = document.getElementById("post-title-input").value;
+  var getStoryBody = document.getElementById("post-body").value;
+  window.open("mailto:" 
+              + emailInput
+              + "?subject="
+              + getStoryTitle 
+              + "&body=" 
+              + getStoryBody 
+              + "%0D%0A%0D%0A%0D%0A" 
+              + "Written by " 
+              + "{{ Auth::user()->first_name}} " 
+              + "{{ Auth::user()->last_name}}" 
+              + "%0D%0A" 
+              + "Join them on Momentale and contribute to this story:" 
+              + "%0D%0A" 
+              + storyUrl);
+}
 </script>
 @endsection
