@@ -104,7 +104,7 @@
       <label for="file-upload" id="cover-upload">
         <span class="ion-camera"> Upload a cover</span> 
       </label>
-      <input id="file-upload" type="file"/>
+      <input name="featured_image" id="file-upload" type="file"/>
       <img src="{{ URL::to('/') }}/uploads/covers/default_cover.png" id="upload-cover-widgetPreview">
         
         </button>
