@@ -36,6 +36,16 @@
         </div>
       </div>
 
+      <div id="invite-modal" class="uk-modal">
+       <div class="uk-modal-dialog">
+         <a class="uk-modal-close uk-close"></a>
+         <h2>Send an invite<span class="dot">.</span></h2>
+         <p>Send an email invite to the person you wish to collaborate with.</p> 
+         <input type="email" class="form-control" id="invite-modal-input" name="invite-modal" placeholder="Enter an email address">
+         <button type="button" class="btn-utility" onclick="emailInfoScrapper()"><span class="ion-paper-airplane"></span> Send Invite </button>
+       </div>
+      </div>
+
       <div class="form-wrap">
         <fieldset>
 
@@ -225,24 +235,30 @@ function shareUtility() {
 }
 
 function emailUtility() {
+  $.UIkit.modal('#invite-modal').show();
+}
+
+function emailInfoScrapper() {
   var storyUrl = window.location.href;
-  var emailInput = "veegish240@gmail.com";
+  var emailInput = document.getElementById("invite-modal-input").value;
   var getStoryTitle = document.getElementById("post-title-input").value;
   var getStoryBody = document.getElementById("post-body").value;
   window.open("mailto:" 
               + emailInput
               + "?subject="
-              + getStoryTitle 
+              + "[MOMENTALE INVITE] - " 
+              +getStoryTitle 
               + "&body=" 
               + getStoryBody 
               + "%0D%0A%0D%0A%0D%0A" 
               + "Written by " 
               + "{{ Auth::user()->first_name}} " 
-              + "{{ Auth::user()->last_name}}" 
+              + "{{ Auth::user()->last_name}}," 
               + "%0D%0A" 
               + "Join them on Momentale and contribute to this story:" 
               + "%0D%0A" 
               + storyUrl);
 }
+
 </script>
 @endsection

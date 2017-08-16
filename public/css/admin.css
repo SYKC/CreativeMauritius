@@ -8071,6 +8071,12 @@ img#upload-cover-widgetPreview {
   width: 100%;
 }
 
+#invite-modal h2,
+#invite-modal p {
+  font-weight: 900;
+  color: #000;
+}
+
 span.dot {
   color: #F6471E;
 }
@@ -8113,8 +8119,13 @@ span.dot {
 }
 
 .ion-share,
-.ion-email {
+.ion-email,
+.ion-paper-airplane {
   font-size: 18px;
+}
+
+#invite-modal-input {
+  margin-bottom: 10px;
 }
 
 .form-wrap {

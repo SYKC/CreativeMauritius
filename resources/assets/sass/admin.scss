@@ -409,6 +409,14 @@ img#upload-cover-widgetPreview {
     width: 100%;
 }
 
+#invite-modal {
+    h2,
+    p {
+        font-weight: 900;
+        color: $complete-black;
+    }
+}
+
 span.dot {
     color: $pomegranate;
 }
@@ -451,8 +459,13 @@ span.dot {
 }
 
 .ion-share,
-.ion-email {
+.ion-email,
+.ion-paper-airplane {
     font-size: 18px;
+}
+
+#invite-modal-input {
+    margin-bottom: 10px;
 }
 
 .form-wrap {
