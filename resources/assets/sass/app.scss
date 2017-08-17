@@ -843,6 +843,12 @@ input#avatar {
     }
 }
 
+section#article-body img,
+iframe {
+    max-width: 650px;
+    display: block;
+}
+
 .headstart {
     font-family: 'Yeseva One', cursive;
     font-size: 25px;

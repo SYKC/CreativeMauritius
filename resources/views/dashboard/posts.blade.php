@@ -79,7 +79,7 @@
                });
 
                firepad.on('synced', function(isSynced) {
-                 document.getElementById("post-body").value = firepad.getText();
+                 document.getElementById("post-body").value = firepad.getHtml();
                });
              }
                // Helper to get hash from end of URL or generate a random one.
