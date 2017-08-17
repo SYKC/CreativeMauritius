@@ -8,7 +8,6 @@ pipelines:
           - chmod +x install-composer.sh
           - ./install-composer.sh
           - composer install
-          - php artisan key:generate
           - export CACHE_DRIVER=redis
           - export SESSION_DRIVER=redis
           - export DB_CONNECTION=mysql
