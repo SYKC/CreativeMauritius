@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-  @include('includes.alerts')
-  <div class="container" id="admin-panel">
-    @if(Session::has('success-message'))
+@include('includes.alerts')
+<nav class="navbar navbar-publishing-tools navbar-fixed-top">
+@if(Session::has('success-message'))
       <div class="success-message"><span class="ion-ios-checkmark-outline"></span> {{ session('success-message') }}</div>
     @endif
 
@@ -13,7 +13,7 @@
     <span class="system-status">System status: <a id="system-status-link">Checking...</a></span>
 
     <div class="btn-group btn-editing-choice">
-     <button value"realtime" id="editor-choice" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <button value"realtime"="" id="editor-choice" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
      Realtime Editing <span class="caret"></span>
      </button>
      <ul class="dropdown-menu">
@@ -22,7 +22,9 @@
        <li id="collab-publishing" onclick="StandaloneEditorChoice()">Collaborative Publishing</li>
      </ul>
     </div>
+</nav>
 
+  <div class="container" id="admin-panel">
     <form class="uk-form uk-form-stacked blog-post-wrapper" id="editing-tools" action="{{ route('post.create') }}" method="post" enctype="multipart/form-data">
       <div class="form-group post-title">
         <label for="post-title"><h1>Title<span class="dot">.</span></h1></label>

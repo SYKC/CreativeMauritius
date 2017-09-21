@@ -337,7 +337,7 @@ img.navbar-avatar {
 }
 
 #admin-panel {
-    margin: 0px auto;
+    margin-top: 75px;
 }
 
 .blog-post-wrapper {
@@ -418,6 +418,10 @@ img#upload-cover-widgetPreview {
         font-weight: 900;
         color: $complete-black;
     }
+}
+
+.uk-modal-dialog {
+    top: 20%;
 }
 
 span.dot {
@@ -728,6 +732,15 @@ span.social-media-widget-icon {
 
 
 /* --Realtime Monitoring System-- */
+
+.navbar-publishing-tools {
+    background: #fff;
+    padding: 2px 6% 25px 6%;
+    width: 100%;
+    -webkit-box-shadow: 0px 8px 28px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 8px 28px -20px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 8px 28px -20px rgba(0, 0, 0, 0.75);
+}
 
 .system-status {
     color: $big-stone;

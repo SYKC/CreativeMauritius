@@ -79,6 +79,8 @@
 
     <script src="{{ asset('js/functions.js') }}"></script>
 
+    <link rel="manifest" href="{{ asset('manifest/manifest.json') }}">
+
 
 </head>
 <body onload="init();">

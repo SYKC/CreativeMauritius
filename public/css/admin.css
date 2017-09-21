@@ -7971,7 +7971,7 @@ img.navbar-avatar {
 }
 
 #admin-panel {
-  margin: 0px auto;
+  margin-top: 75px;
 }
 
 .blog-post-wrapper {
@@ -8051,6 +8051,10 @@ img#upload-cover-widgetPreview {
 #invite-modal p {
   font-weight: 900;
   color: #000;
+}
+
+.uk-modal-dialog {
+  top: 20%;
 }
 
 span.dot {
@@ -8349,6 +8353,13 @@ span.social-media-widget-icon {
 
 /* - - - - Firepad Styling - - - - */
 /* --Realtime Monitoring System-- */
+.navbar-publishing-tools {
+  background: #fff;
+  padding: 2px 6% 25px 6%;
+  width: 100%;
+  box-shadow: 0px 8px 28px -20px rgba(0, 0, 0, 0.75);
+}
+
 .system-status {
   color: #142433;
   position: relative;
