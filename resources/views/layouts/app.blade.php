@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,900" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <!-- Styles -->
-    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ secure_asset('css/ink-css/ink.min.css') }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/ink-css/ink.min.css') }}">
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -28,7 +28,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    <script src="{{ secure_asset('js/ink-js/ink-all.min.js') }}"></script>
+    <script src="{{ asset('js/ink-js/ink-all.min.js') }}"></script>
 </head>
 <body>
   @include('includes.navigation')

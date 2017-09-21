@@ -75,9 +75,9 @@
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
     <!-- Core CSS files -->
-    <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet" type="text/css">
 
-    <script src="{{ secure_asset('js/functions.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
 
 
 </head>

@@ -4,7 +4,7 @@
     <h3>Media library</h3>
     @foreach($posts as $post)
     <div class="container col-md-3">
-      <img class="media-library-wrap" src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
+      <img class="media-library-wrap" src="{{ url('/') }}/uploads/covers/{{ $post->featured_image }}">
     </div>
     @endforeach
 </div>

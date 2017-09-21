@@ -1439,7 +1439,6 @@ img {
   background-color: #f5f8fa;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -3040,7 +3039,6 @@ output {
   border: 1px solid #ccd0d2;
   border-radius: 4px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
@@ -4032,7 +4030,6 @@ input[type="button"].btn-block {
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 
@@ -4060,11 +4057,8 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
   transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
 
@@ -5726,7 +5720,6 @@ a.badge:hover, a.badge:focus {
   background-color: #f5f8fa;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
 }
 
@@ -5881,13 +5874,11 @@ a.thumbnail.active {
   text-align: center;
   background-color: #3097D1;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
 
 .progress-striped .progress-bar,
 .progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
 }
@@ -5903,7 +5894,6 @@ a.thumbnail.active {
 }
 
 .progress-striped .progress-bar-success {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -5912,7 +5902,6 @@ a.thumbnail.active {
 }
 
 .progress-striped .progress-bar-info {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -5921,7 +5910,6 @@ a.thumbnail.active {
 }
 
 .progress-striped .progress-bar-warning {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -5930,7 +5918,6 @@ a.thumbnail.active {
 }
 
 .progress-striped .progress-bar-danger {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
@@ -6734,7 +6721,6 @@ button.close {
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
   transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -7160,7 +7146,6 @@ button.close {
 .carousel-inner > .item {
   display: none;
   position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
 
@@ -7174,7 +7159,6 @@ button.close {
 
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
     transition: -webkit-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
@@ -7254,7 +7238,6 @@ button.close {
 }
 
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -7263,7 +7246,6 @@ button.close {
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -7737,8 +7719,6 @@ body .homepage-impression {
   background-position: center !important;
   background-size: cover !important;
   background: #6262fb;
-  background: -webkit-linear-gradient(-45deg, #6262fb 0%, #ef0d33 100%);
-  background: -webkit-linear-gradient(315deg, #6262fb 0%, #ef0d33 100%);
   background: linear-gradient(135deg, #6262fb 0%, #ef0d33 100%);
 }
 
@@ -7816,7 +7796,6 @@ a:focus {
   background-position: center;
   background-size: cover;
   box-shadow: inset 0px 80px 64px -18px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
@@ -7881,26 +7860,22 @@ a:focus {
   border-radius: 50px;
   color: #F5F5F5;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 .featured-container button#learn-more:hover {
   width: 150px;
   background-color: #00D054;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 .featured-container button#learn-more:hover > .ion-chevron-right {
   display: inline-block;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 .featured-container:hover {
   box-shadow: inset 0px 50px 64px -18px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
@@ -8057,11 +8032,8 @@ h5#add-tags {
   max-width: 320px;
   border: 2px solid #fff;
   color: #FFF;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background: #5c47cd;
-  background: -webkit-linear-gradient(-45deg, #5c47cd 0%, #ee3d43 100%, #9fd8ef 100%);
-  background: -webkit-linear-gradient(315deg, #5c47cd 0%, #ee3d43 100%, #9fd8ef 100%);
   background: linear-gradient(135deg, #5c47cd 0%, #ee3d43 100%, #9fd8ef 100%);
 }
 
@@ -8070,11 +8042,8 @@ h5#add-tags {
   max-width: 320px;
   border: 2px solid #fff;
   color: #FFF;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background: #0cad9a;
-  background: -webkit-linear-gradient(-45deg, #0cad9a 0%, #f0ff00 100%, #2e3837 100%, #f0ff00 100%);
-  background: -webkit-linear-gradient(315deg, #0cad9a 0%, #f0ff00 100%, #2e3837 100%, #f0ff00 100%);
   background: linear-gradient(135deg, #0cad9a 0%, #f0ff00 100%, #2e3837 100%, #f0ff00 100%);
 }
 
@@ -8083,29 +8052,23 @@ h5#add-tags {
   max-width: 320px;
   border: 2px solid #fff;
   color: #FFF;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   background: #009cfc;
-  background: -webkit-linear-gradient(-45deg, #009cfc 0%, #009cfc 0%, #00d054 100%);
-  background: -webkit-linear-gradient(315deg, #009cfc 0%, #009cfc 0%, #00d054 100%);
   background: linear-gradient(135deg, #009cfc 0%, #009cfc 0%, #00d054 100%);
 }
 
 #art:hover {
   border: 2px solid #5c47cd;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 #culture:hover {
   border: 2px solid #0cad9a;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
 #history:hover {
   border: 2px solid #009cfc;
-  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
 
@@ -8262,7 +8225,6 @@ li.main-menu-items:after {
   margin: auto;
   display: block;
   background: transparent;
-  -webkit-transition: width 500ms ease, background-color 500ms ease;
   transition: width 500ms ease, background-color 500ms ease;
 }
 
@@ -8280,7 +8242,6 @@ input#avatar {
 .navbar-scroll {
   height: 80px !important;
   box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background: #333 !important;
 }
@@ -8291,7 +8252,6 @@ input#avatar {
   padding: 10px;
   color: #FFF;
   background: transparent;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -8313,7 +8273,6 @@ input#avatar {
   border: none;
   border-color: #009CFC;
   box-shadow: none;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -8432,7 +8391,6 @@ input#avatar {
   font-family: "Ionicons";
   content: "\f366";
   padding-right: 6px;
-  -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
@@ -8441,13 +8399,11 @@ input#avatar {
   top: 10px;
   display: inline-block;
   border-bottom: 1px solid #FFF;
-  -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
 #article-title-section:hover {
   border-bottom: 1px solid #F6471E;
-  -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
@@ -8600,14 +8556,12 @@ span.hidden-metadata {
   max-width: 40px;
   position: absolute;
   display: block !important;
-  -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
 .scroll-show {
   opacity: 1;
   display: block !important;
-  -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
@@ -8680,7 +8634,6 @@ span.hidden-metadata {
     border: none;
     width: 100%;
     background: #142433 !important;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
   #app-navbar-collapse {

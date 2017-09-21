@@ -61,7 +61,7 @@
         @foreach ($posts->sortByDesc('id')->slice(0,3) as $post)
         <div class="col-md-4 latest-posts-body">
          <figure>
-           <img class="dashboard-post-cover" src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
+           <img class="dashboard-post-cover" src="{{ url('/') }}/uploads/covers/{{ $post->featured_image }}">
            <figcaption class="latest-posts-excerpt">
              <h3>
                {{ $post->title }}

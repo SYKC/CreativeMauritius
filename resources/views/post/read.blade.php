@@ -11,18 +11,18 @@
       @if ($post->featured_image != "default_cover.png")
         <div class="post-cover-bg">
           <figure>
-            <img src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}" class="img-cover" alt="{{ $post->title }}">
+            <img src="{{ url('/') }}/uploads/covers/{{ $post->featured_image }}" class="img-cover" alt="{{ $post->title }}">
           </figure>
         </div>
       @else
         <!-- Add an overlapping div with a {category} text displayed over image-->
-        <img src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}" class="img-cover" alt="{{ $post->title }}">
+        <img src="{{ url('/') }}/uploads/covers/{{ $post->featured_image }}" class="img-cover" alt="{{ $post->title }}">
       @endif
 
       <div class="row main-content-wrapper">
         <aside class="article-metadata-container col-md-3">
          <span>Written by</span>
-         <img class="author-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ $post->user->avatar }}">
+         <img class="author-avatar" src="{{ url('/') }}/uploads/avatars/{{ $post->user->avatar }}">
          <p class="author-name">{{ $post->user->first_name }} {{ $post->user->last_name }}</p>
          <span class="icon">
           <i class="ion-calendar"> 27 MAY 2017</i>
