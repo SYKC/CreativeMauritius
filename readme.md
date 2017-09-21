@@ -26,7 +26,7 @@ php artisan migrate
 
 ###Step 5: Install Node Modules
 ```bash
-php artisan migrate
+npm install
 ```
 
 ###Step 6: Compiling assets
