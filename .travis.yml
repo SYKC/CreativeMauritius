@@ -1,3 +1,11 @@
 language: php
 php:
-  - '7.0.10'
+  - 7.0.10
+
+  before_script:
+  - cp .env.travis .env
+  - composer self-update
+  - composer install --no-interaction
+
+script:
+  - php artisan key:generate
