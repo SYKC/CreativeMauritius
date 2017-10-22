@@ -1,5 +1,5 @@
-![LOGO](https://res.cloudinary.com/xdisrupt/image/upload/v1502990223/creativemauritius.com/momentale_logo.png)
-# Momentale 
+![LOGO](https://res.cloudinary.com/xdisrupt/image/upload/c_scale,w_333/v1502990223/creativemauritius.com/momentale_logo.png)
+# Momentale [![Build Status](https://travis-ci.com/VEEGISHx/Momentale.svg?token=qyVB6riPo3RHHe7kf7g7&branch=master)](https://travis-ci.com/VEEGISHx/Momentale)
 ###### Redefining online storytelling.
 Momentale is a simple and intuitive content managing platform focused on improving storytelling through realtime collaborative writing. Momentale is built on top of Laravel framework and thus makes it highly modular in terms of developing themes and plugins.
 
