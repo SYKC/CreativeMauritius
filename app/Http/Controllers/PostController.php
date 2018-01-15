@@ -48,6 +48,7 @@ class PostController extends Controller
       $post->body = $request['post-body'];
       $post->featured_image = $request->file('featured_image');;
       $post->tags = $request['post-tags'];
+      $post->excerpt_body = $request['post-excerpt'];
       $message = 'An error has occured!';
 
       //Chmod 777 the image directory for writing images

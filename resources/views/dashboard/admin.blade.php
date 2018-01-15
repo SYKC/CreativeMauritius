@@ -32,7 +32,7 @@
           <h4>Your stories will appear here.</h4>
         </div>
        @else
-       <div class="story-placeholder">z
+       <div class="story-placeholder">
         @foreach($posts->sortByDesc('id')->slice(0,3) as $post)
          <h1>{{ $post->title }}</h1>
          <p>{{ $post->excerpt_body }}</p>
