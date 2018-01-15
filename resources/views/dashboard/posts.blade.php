@@ -130,6 +130,11 @@
       </div>
 
       <div class="form-group widget-area">
+      <label for="post-excerpt" class="excerpt-label"><h1>Post Excerpt<span class="dot">.</span></h1></label>
+        <textarea name="post-excerpt" style="min-width: 240px; max-width:240px; min-height: 130px;"></textarea>
+      </div>
+
+      <div class="form-group widget-area">
         <label for="post-tags" class="tag-label"><h1>Add some tags<span class="dot">.</span></h1></label>
         <input type="text" class="form-control" id="post-tags-input" name="post-tags" placeholder="Separate your tags with a comma">
         <div class="<uk-form-select>" data-uk-form-select>

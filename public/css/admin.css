@@ -8017,14 +8017,16 @@ img.navbar-avatar {
 .story-editor,
 .story-collaborate-label,
 .story-label,
-.tag-label {
+.tag-label,
+.excerpt-label {
   display: block;
 }
 
 .story-editor h1,
 .story-collaborate-label h1,
 .story-label h1,
-.tag-label h1 {
+.tag-label h1,
+.excerpt-label h1 {
   font-size: 30px;
   font-weight: 600;
   color: #000;
