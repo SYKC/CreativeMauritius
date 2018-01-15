@@ -249,7 +249,7 @@ function emailInfoScrapper() {
               + emailInput
               + "?subject="
               + "[MOMENTALE INVITE] - " 
-              +getStoryTitle 
+              + getStoryTitle 
               + "&body=" 
               + getStoryBody 
               + "%0D%0A%0D%0A%0D%0A" 

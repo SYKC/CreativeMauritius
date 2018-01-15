@@ -18,14 +18,28 @@
       <ul class="horizontal-navigation">
           <li class="nav-items--publications" data-count="{{ Auth::user()->posts->count() }}">{{ Auth::user()->posts->count() }} Stories published</li>
           <li class="nav-items--followers">125 Followers</li>
-          <li class="nav-items--collaborations">4 Collaborations</li>
+          <li class="nav-items--collaborations">0 Collaborations</li>
       </ul>
       </div>
        <div class="top-banner">
          <h1>Got a story?</h1>
          <p>Start working on it, either alone or collaborate with someone.</p>
-         <button class="get-started">Let's Go!</button>
+         <a href="{{ route('dashboard.posts') }}"><button class="get-started">Let's Go!</button></a>
        </div>
+
+       @if($posts->count() < 1)
+        <div class="no-story-placeholder">
+          <h4>Your stories will appear here.</h4>
+        </div>
+       @else
+       <div class="story-placeholder">z
+        @foreach($posts->sortByDesc('id')->slice(0,3) as $post)
+         <h1>{{ $post->title }}</h1>
+         <p>{{ $post->excerpt_body }}</p>
+        @endforeach
+       </div>
+       @endif
+
     </div>
       <div id="graph-container" style="min-width: 310px; height: 400px;"></div>
       <div class="row">
@@ -67,7 +81,7 @@
                {{ $post->title }}
              </h3>
              <p>
-               {{ substr($post->body, 0, 120) }}...
+               {{ $post->excerpt_body }}
              </p>
            </figcaption>
          </figure>

@@ -38,12 +38,12 @@
     <div class="layout-2-1-sidebar">
      <div class="col-md-8 article-full-cover">
      @foreach($posts->sortByDesc('id')->slice(0,1) as $post)
-     <img class="responsive-media" src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
+     <img class="responsive-media" src="{{ URL::to('/') }}/uploads/covers/{{ $post->featured_image }}">
       <div class="article-details-overlay">
       <span class="category">Cultural Origins</span>
         <span class="article-author">
          A story by
-         <img class="author-avatar" src="{{ URL::secure('/') }}/uploads/avatars/{{ $post->user->avatar }}">
+         <img class="author-avatar" src="{{ URL::to('/') }}/uploads/avatars/{{ $post->user->avatar }}">
          {{ $post->user->name }}</span>
         <h1>{{ $post->title }}</h1>
      @endforeach
@@ -65,7 +65,7 @@
       @foreach($posts->sortByDesc('id')->slice(0,2) as $post)
        <div class="home-new-article-card col-md-4">
        <span class="hidden-metadata" data-description="{{  $post->tags }}"></span>
-         <img class="featured-image-wrapper" src="{{ URL::secure('/') }}/uploads/covers/{{ $post->featured_image }}">
+         <img class="featured-image-wrapper" src="{{ URL::to('/') }}/uploads/covers/{{ $post->featured_image }}">
          <div class="article-card-excerpt">
           <h2>{{ $post->title}}</h2>
           <p>{{ substr($post->body, 0, 200) }}...</p>

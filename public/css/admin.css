@@ -7735,8 +7735,9 @@ span.ion-connection-bars {
 }
 
 .top-banner {
-  width: 100%;
+  width: 290px;
   height: 300px;
+  display: inline-block;
   position: relative;
   border-radius: 4px;
   margin-bottom: 50px;
@@ -7773,7 +7774,7 @@ span.ion-connection-bars {
   border-radius: 4px;
   padding: 10px;
   color: #FFF;
-  top: 160px;
+  top: 190px;
   float: right;
   right: 0px;
   transition: all 200ms ease-in-out;
@@ -7782,6 +7783,24 @@ span.ion-connection-bars {
 .top-banner button.get-started:hover {
   box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
   transition: all 200ms ease-in-out;
+}
+
+.no-story-placeholder {
+  color: #00D054;
+  text-align: center;
+  border: 3px dashed #00D054;
+  width: 100%;
+  display: inline-block;
+  float: right;
+  padding: 130px;
+  max-width: 800px;
+}
+
+.story-placeholder {
+  width: 100%;
+  display: inline-block;
+  float: right;
+  max-width: 800px;
 }
 
 /* - - - - UI Kit - - - - */
@@ -8268,21 +8287,37 @@ span.dot {
 img.dashboard-post-cover {
   width: 100%;
   max-height: 220px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+@media (max-width: 990px) {
+  img.dashboard-post-cover {
+    max-height: 400px;
+  }
 }
 
 .latest-posts-body {
   padding: 0px;
-  margin-bottom: 20px;
+  margin: 28px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 40px -8px rgba(0, 0, 0, 0.4);
 }
 
 figure:hover > .latest-posts-excerpt {
+  color: #FFF;
   cursor: pointer;
-  background-color: #eeeeff;
+  background-color: #009CFC;
+  transition: all 200ms ease-in-out;
 }
 
 .latest-posts-excerpt {
-  background-color: #eee;
+  background-color: #FFF;
   padding: 8px;
+  color: #000;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: all 200ms ease-in-out;
 }
 
 .insights-tab {
@@ -8290,11 +8325,12 @@ figure:hover > .latest-posts-excerpt {
   margin-bottom: 50px;
   border-radius: 4px;
   background-color: #FFF;
-  box-shadow: 0px 2px 10px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.4);
 }
 
 .insights-tab-header {
   padding: 8px;
+  text-align: center;
   border-bottom: 1px solid;
 }
 
