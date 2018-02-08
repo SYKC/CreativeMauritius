@@ -3,12 +3,12 @@
 @import "variables";
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-html {
-    background-color: $big-stone;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
+    #app {
+        top: 0;
+    }
+    font-family: 'Roboto',
+    sans-serif;
     margin: -22px 0 0 0;
     background-color: $white-smoke;
     h1.site-title {
@@ -102,15 +102,6 @@ a:focus {
 
 .panel-default {
     margin-top: 50px;
-}
-
-#container-top-profile,
-{
-    margin-top: 200px;
-}
-
-#container-top-blog {
-    margin-top: 100px;
 }
 
 .homepage-container {
@@ -576,27 +567,28 @@ h5#add-tags {
 #my-progress {}
 
 img.navbar-avatar {
-    width: 47px;
-    height: 45px;
+    width: 60px;
+    height: 54px;
     float: right;
-    margin: 0 -28px 0 10px;
-    border-radius: 2px;
 }
 
 span.navbar-name {
     padding: 12px;
     font-size: 16px;
-    font-weight: 800;
     display: inline-block;
 }
 
-.dropdown.open {
-    background-color: #17D6B6;
-    height: 45px;
-    border-radius: 4px;
+.dropdown.open>.dropdown-user-menu {
+    right: 28px;
+    left: auto;
+    top: 41px;
+    border-radius: 0;
+    display: grid;
+    width: 237px;
 }
 
 li.main-menu-items {
+    margin: 14px;
     display: inline-block;
     position: relative;
 }
@@ -623,15 +615,18 @@ input#avatar {
 }
 
 .navbar-scroll {
-    height: 80px !important;
-    -webkit-box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
-    -moz-box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
+    top: 0;
+    width: 100%;
+    position: fixed;
+    border-radius: 0px;
+    border: 0;
+    height: 76px !important;
     box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background: #333 !important;
+    color: #4275F4;
+    background: $complete-white;
+    z-index: 1000;
+    padding: 22px;
 }
 
 //Most beautiful one
@@ -646,42 +641,7 @@ input#avatar {
 //background: -webkit-linear-gradient(-45deg, rgba(0,156,252,1) 0%,rgba(0,156,252,1) 49%,rgba(53,55,58,1) 49%); /* Chrome10-25,Safari5.1-6 */
 //background: linear-gradient(135deg, rgba(0,156,252,1) 0%,rgba(0,156,252,1) 49%,rgba(53,55,58,1) 49%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cfc', endColorstr='#35373a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-.navbar-default {
-    border: none;
-    height: 90px;
-    padding: 10px;
-    color: $complete-white;
-    background: $totally-transparent;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    .navbar-toggle {
-        border: none;
-        margin-top: 0px;
-        font-size: 20px;
-    }
-    .navbar-toggle:hover,
-    .navbar-toggle:focus {
-        color: $white-smoke;
-        border: none;
-        background-color: $azure-radiance;
-    }
-}
-
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-    border: none;
-    border-color: #009CFC;
-    box-shadow: none;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
 #left-section {
-    margin-top: 4px;
     text-transform: uppercase;
 }
 
@@ -803,7 +763,7 @@ input#avatar {
 
 #article-title-section {
     position: relative;
-    top: 10px;
+    top: 15px;
     display: inline-block;
     border-bottom: 1px solid $complete-white;
     -webkit-transition: all .5s ease;
@@ -958,7 +918,7 @@ span.hidden-metadata {
 
 .logo-navbar {
     opacity: 0;
-    left: 70px;
+    left: 45px;
     width: 100%;
     max-width: 40px;
     position: absolute;
@@ -976,280 +936,4 @@ span.hidden-metadata {
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
-}
-
-@media (min-width: 1200px) {
-    #left-section {
-        margin-left: 100px;
-    }
-    .navbar-collapse {
-        margin-right: 100px !important;
-    }
-}
-
-@media all and (max-width: 2000px) {
-    #main-menu {
-        display: none !important;
-    }
-    #small-menu-visible {
-        display: inline-block;
-        list-style: none;
-        font-family: "Cabin", sans-serif;
-        top: 12px;
-        position: fixed;
-        left: 0;
-        ul {
-            list-style: none;
-            li {
-                margin: 10px 25px 0 0;
-                color: $complete-white;
-                display: inline-block;
-                a {
-                    color: $complete-white;
-                }
-            }
-        }
-    }
-    #menu-trigger,
-    #menu-mobile {
-        cursor: pointer;
-        padding: 6px;
-        background-color: #009CFC;
-        color: #F5F5F5;
-        border-radius: 2px;
-        position: absolute;
-        margin-top: 8px;
-        -webkit-box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
-    }
-    ul.navbar-avatar-container {
-        top: 8px;
-        list-style: none;
-        position: relative;
-        display: inline-block;
-    }
-    ul.navbar-avatar-container-mobile {
-        display: none;
-    }
-}
-
-@media all and (max-width: 768px) {
-    #small-menu-visible {
-        display: none !important;
-    }
-    #menu-trigger {
-        display: none !important;
-    }
-    .navbar-default,
-    .navbar-toggle,
-    .navbar-toggle:hover,
-    .navbar-toggle:focus {
-        margin: 0px;
-        border: none;
-        width: 100%;
-        background: $big-stone !important;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-    #app-navbar-collapse {
-        display: block;
-    }
-}
-
-@media all and (max-width: 500px) {
-    ul.navbar-avatar-container {
-        display: none;
-    }
-    ul.navbar-avatar-container-mobile {
-        display: block;
-        top: 50px;
-        position: relative;
-        text-align: center;
-    }
-}
-
-
-/* ----------- iPhone 4 and 4S ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    h1 {
-        font-size: 18px;
-    }
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-    #mega-navigation {
-        top: 24px;
-        position: relative;
-    }
-    #small-menu-visible {
-        width: 100%;
-    }
-    #art {
-        max-width: 120px;
-        height: 120px;
-        padding: 25px 0 0 0;
-    }
-    #culture {
-        max-width: 120px;
-        height: 120px;
-        padding: 25px 0 0 0;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* ----------- iPhone 5 and 5S ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* ----------- iPhone 6 ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* ----------- iPhone 6+ ----------- */
-
-
-/* Portrait and Landscape */
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Portrait */
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Landscape */
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        top: 0px;
-        position: relative;
-        background-color: $big-stone !important;
-    }
-}
-
-
-/* Bootstrap stylesheets */
-
-.row {
-    margin-right: 0px !important;
 }

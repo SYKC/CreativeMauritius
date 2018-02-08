@@ -42,44 +42,6 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 
-    @if(Request::url() === URL::secure('home') || Request::url() === URL::to('home'))
-      <script>
-      //applies blur filter on parallax image while scrolling
-          $(window).on('scroll', function () {
-          var pixs = $(document).scrollTop()
-          pixs = pixs / 500;
-          $(".showcase-container").css({"-webkit-filter": "grayscale("+pixs+")","filter": "grayscale("+pixs+")" })
-      });
-      </script>
-
-      <script>
-      $(document).ready(function() {
-        var navigation = $(".navbar-default");
-        var logo = $(".logo-navbar");
-        var pos = navigation.position();
-        $(window).scroll(function() {
-          var windowpos = $(window).scrollTop();
-          if (windowpos >= 100) {
-            navigation.addClass("navbar-scroll");
-            logo.addClass("scroll-show")
-          } else {
-            navigation.removeClass("navbar-scroll");
-            logo.removeClass("scroll-show");
-          }
-        });
-      });
-      </script>
-    @else
-      <script>
-      $(document).ready(function() {
-        var logo = $(".logo-navbar");
-        logo.css("opacity","1");
-        var navigation = $(".navbar-default");
-        navigation.addClass("navbar-scroll");
-      });
-      </script>
-    @endif
-
     <script>
     if ($('#article-header').length > 0) {
       $(document).ready(function() {

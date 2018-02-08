@@ -74,6 +74,11 @@ class PostController extends Controller
       }
     }
 
+    public function saveDraft() {
+      $this->middleware('auth');
+      // Get current post url and save to database
+    }
+
     public function readPost($id)
     {
       $this->middleware('guest');

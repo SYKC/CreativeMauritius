@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-  <div class="blog-post-container" id="main-wrapper">
+  <div class="blog-post-container">
     <article role="main">
       <section id="article-header">
         <header id="title" data-description="{{ $post->tags }}">

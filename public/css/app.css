@@ -7677,14 +7677,14 @@ button.close {
   }
 }
 
-html {
-  background-color: #142433;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: -22px 0 0 0;
   background-color: #F5F5F5;
+}
+
+body #app {
+  top: 0;
 }
 
 body h1.site-title {
@@ -7769,14 +7769,6 @@ a:focus {
 
 .panel-default {
   margin-top: 50px;
-}
-
-#container-top-profile {
-  margin-top: 200px;
-}
-
-#container-top-blog {
-  margin-top: 100px;
 }
 
 .homepage-container {
@@ -8193,27 +8185,29 @@ h5#add-tags {
 }
 
 img.navbar-avatar {
-  width: 47px;
-  height: 45px;
+  width: 60px;
+  height: 54px;
   float: right;
-  margin: 0 -28px 0 10px;
-  border-radius: 2px;
 }
 
 span.navbar-name {
   padding: 12px;
   font-size: 16px;
-  font-weight: 800;
   display: inline-block;
 }
 
-.dropdown.open {
-  background-color: #17D6B6;
-  height: 45px;
-  border-radius: 4px;
+.dropdown.open > .dropdown-user-menu {
+  right: 28px;
+  left: auto;
+  top: 41px;
+  border-radius: 0;
+  display: -ms-grid;
+  display: grid;
+  width: 237px;
 }
 
 li.main-menu-items {
+  margin: 14px;
   display: inline-block;
   position: relative;
 }
@@ -8240,44 +8234,21 @@ input#avatar {
 }
 
 .navbar-scroll {
-  height: 80px !important;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  border-radius: 0px;
+  border: 0;
+  height: 76px !important;
   box-shadow: 0px 7px 28px 0px rgba(66, 135, 255, 0.1);
   transition: all 0.5s ease;
-  background: #333 !important;
-}
-
-.navbar-default {
-  border: none;
-  height: 90px;
-  padding: 10px;
-  color: #FFF;
-  background: transparent;
-  transition: all 0.5s ease;
-}
-
-.navbar-default .navbar-toggle {
-  border: none;
-  margin-top: 0px;
-  font-size: 20px;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  color: #F5F5F5;
-  border: none;
-  background-color: #009CFC;
-}
-
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border: none;
-  border-color: #009CFC;
-  box-shadow: none;
-  transition: all 0.5s ease;
+  color: #4275F4;
+  background: #FFF;
+  z-index: 1000;
+  padding: 22px;
 }
 
 #left-section {
-  margin-top: 4px;
   text-transform: uppercase;
 }
 
@@ -8397,7 +8368,7 @@ input#avatar {
 
 #article-title-section {
   position: relative;
-  top: 10px;
+  top: 15px;
   display: inline-block;
   border-bottom: 1px solid #FFF;
   transition: all .5s ease;
@@ -8552,7 +8523,7 @@ span.hidden-metadata {
 
 .logo-navbar {
   opacity: 0;
-  left: 70px;
+  left: 45px;
   width: 100%;
   max-width: 40px;
   position: absolute;
@@ -8564,243 +8535,6 @@ span.hidden-metadata {
   opacity: 1;
   display: block !important;
   transition: all .5s ease;
-}
-
-@media (min-width: 1200px) {
-  #left-section {
-    margin-left: 100px;
-  }
-  .navbar-collapse {
-    margin-right: 100px !important;
-  }
-}
-
-@media all and (max-width: 2000px) {
-  #main-menu {
-    display: none !important;
-  }
-  #small-menu-visible {
-    display: inline-block;
-    list-style: none;
-    font-family: "Cabin", sans-serif;
-    top: 12px;
-    position: fixed;
-    left: 0;
-  }
-  #small-menu-visible ul {
-    list-style: none;
-  }
-  #small-menu-visible ul li {
-    margin: 10px 25px 0 0;
-    color: #FFF;
-    display: inline-block;
-  }
-  #small-menu-visible ul li a {
-    color: #FFF;
-  }
-  #menu-trigger,
-  #menu-mobile {
-    cursor: pointer;
-    padding: 6px;
-    background-color: #009CFC;
-    color: #F5F5F5;
-    border-radius: 2px;
-    position: absolute;
-    margin-top: 8px;
-    box-shadow: 0px 6px 10px -4px rgba(0, 0, 0, 0.2);
-  }
-  ul.navbar-avatar-container {
-    top: 8px;
-    list-style: none;
-    position: relative;
-    display: inline-block;
-  }
-  ul.navbar-avatar-container-mobile {
-    display: none;
-  }
-}
-
-@media all and (max-width: 768px) {
-  #small-menu-visible {
-    display: none !important;
-  }
-  #menu-trigger {
-    display: none !important;
-  }
-  .navbar-default,
-  .navbar-toggle,
-  .navbar-toggle:hover,
-  .navbar-toggle:focus {
-    margin: 0px;
-    border: none;
-    width: 100%;
-    background: #142433 !important;
-    transition: all 0.5s ease;
-  }
-  #app-navbar-collapse {
-    display: block;
-  }
-}
-
-@media all and (max-width: 500px) {
-  ul.navbar-avatar-container {
-    display: none;
-  }
-  ul.navbar-avatar-container-mobile {
-    display: block;
-    top: 50px;
-    position: relative;
-    text-align: center;
-  }
-}
-
-/* ----------- iPhone 4 and 4S ----------- */
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  h1 {
-    font-size: 18px;
-  }
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-  #mega-navigation {
-    top: 24px;
-    position: relative;
-  }
-  #small-menu-visible {
-    width: 100%;
-  }
-  #art {
-    max-width: 120px;
-    height: 120px;
-    padding: 25px 0 0 0;
-  }
-  #culture {
-    max-width: 120px;
-    height: 120px;
-    padding: 25px 0 0 0;
-  }
-}
-
-/* Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* ----------- iPhone 5 and 5S ----------- */
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* ----------- iPhone 6 ----------- */
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* ----------- iPhone 6+ ----------- */
-/* Portrait and Landscape */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Portrait */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Landscape */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    top: 0px;
-    position: relative;
-    background-color: #142433 !important;
-  }
-}
-
-/* Bootstrap stylesheets */
-.row {
-  margin-right: 0px !important;
 }
 
 /*# sourceMappingURL=app.css.map */

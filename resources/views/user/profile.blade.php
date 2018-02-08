@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" id="container-top-profile">
+<div class="container">
   @if(Auth::check() && ( Route::Input('username') === Auth::user()->username ))
     <p id="welcome-message">
       Hello, {{ Auth::user()->first_name }}

@@ -1,36 +1,48 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
+<nav class="navbar fixed-top navbar-default navbar-expand-lg navbar-scroll">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url('/') }}">
+        <img class="logo-navbar" src="https://res.cloudinary.com/xdisrupt/image/upload/v1484905525/creativemauritius.com/Final_Logo_transparent.png" alt="Creative Mauritius">
+      </a>
+    </div>
 
-            <!-- Mobile Collapsed Hamburger -->
-            <button id="menu-trigger2" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                <span class="sr-only">Toggle Navigation</span>
-                <span id="menu-mobile-visible" class="ion-navicon-round"> MENU</span>
-            </button>
-
-            <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
-              <img class="logo-navbar" src="https://res.cloudinary.com/xdisrupt/image/upload/v1484905525/creativemauritius.com/Final_Logo_transparent.png" alt="Creative Mauritius">
-            </a>
-            <div id="small-menu-visible">
-              <ul class="navbar-left" id="left-section">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+                      <ul class="navbar-left" id="left-section">
                 <li class="main-menu-items"> Blog </li>
                 <li class="main-menu-items"> Projects </li>
                 <li class="main-menu-items"> Resources </li>
                 <li class="main-menu-items"> Collective </li>
                 <span id="article-title-section"></span>
               </ul>
-            </div>
-
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
         </div>
-
-        <!-- Menu button desktop -->
-          <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <ul class="navbar-right">
-              <span id="menu-trigger" class="ion-navicon-round"> MENU</span>
-            </ul>
-
-            <ul class="navbar-right navbar-avatar-container">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="navbar-right navbar-avatar-container">
               @if (Auth::guest())
                 <div class="auth">
                   <li><a href="{{ url('/login') }}">Login</a></li>
@@ -44,7 +56,7 @@
                             <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                         </a>
 
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu dropdown-user-menu" role="menu">
                            <li>
                                 <a href="{{ url('/') }}/user/{{ Auth::user()->username }}"> View Profile</a>
                            </li>
@@ -64,76 +76,6 @@
                     </li>
                 @endif
             </ul>
-
-          <div id="mega-navigation">
-            <ul class="navbar-right navbar-avatar-container-mobile">
-              @if (Auth::guest())
-                  <li><a href="{{ url('/login') }}">Login</a></li>
-                  <li><a href="{{ url('/register') }}">Register</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                          <img class="navbar-avatar" src="{{ url('/') }}/uploads/avatars/{{ Auth::user()->avatar}}" alt="{{ Auth::user()->username }}">
-                            <span class="caret"></span> <span class="navbar-name">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                           <li>
-                                <a href="{{ url('/') }}/user/{{ Auth::user()->username }}"> View Profile</a>
-                           </li>
-
-                            <li>
-                                <a href="{{ url('/logout') }}"
-                                    onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-
-                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                @endif
-            </ul>
-            <div id="main-menu">
-              <!--Responsive menu content-->
-            </div>
-            <div id="large-menu">
-              <div class="categories">
-
-                <div class="menu-category-grid" id="art">
-                  <h1>ART</h1>
-                </div>
-
-                <div class="menu-category-grid" id="culture">
-                  <h1>CULTURE</h1>
-                </div>
-
-                <div class="menu-category-grid" id="history">
-                  <h1>HISTORY</h1>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
-
-<script>
-$('#menu-trigger').click(function() {
-  $('#mega-navigation').slideToggle('slow', function () {
-
-  });
-});
-</script>
-
-<script>
-$('#menu-trigger2').click(function() {
-  $('#mega-navigation').slideToggle('slow', function () {
-
-  });
-});
-</script>
